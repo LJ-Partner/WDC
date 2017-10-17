@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% include "./global/head.html" ignore missing %}
+		{% block css %}{% endblock %}
+	</head>
+	<body>
+		<section>
+			<div class="main-content">
+				<div class="wrapper">
+					{% block body %}{% endblock %}
+				</div>
+			</div>
+		</section>
+		{% block js %}{% endblock %}
+	</body>
+</html>
