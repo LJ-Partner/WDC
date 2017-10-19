@@ -5,12 +5,9 @@
 		{% block css %}{% endblock %}
 	</head>
 	<body>
-		<section>
-			<div class="main-content">
-				<div class="wrapper">
-					{% block body %}{% endblock %}
-				</div>
-			</div>
+		{% include "./global/head-top.html" ignore missing %}
+		<section class="main-content">
+			{% block body %}{% endblock %}
 		</section>
 		{% block js %}{% endblock %}
 	</body>

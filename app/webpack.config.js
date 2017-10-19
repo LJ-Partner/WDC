@@ -3,11 +3,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
-
-// var CleanWebpackPlugin = require('clean-webpack-plugin');
-// var AssetsPlugin = require('assets-webpack-plugin');
-//hbs公共资源编译路径
-
 function rdom() {
     var rdm = Math.floor(Math.random() * 20 + 1);
     if (rdm < 10) {
@@ -56,6 +51,9 @@ module.exports = {
         }, {
             test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
             loader: "file-loader?name=svg/[name].[ext]"
+        }, {
+            test: require.resolve("jquery"), 
+            loader: "expose-loader?$" 
         }]
     },
     babel: {
@@ -64,33 +62,11 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("css/[name].css"),
-        new webpack.HotModuleReplacementPlugin() //热加载
-        // new AssetsPlugin({
-        //     filename: 'headline_h5.map.json',
-        //     path: dist,
-        //     prettyPrint: true,
-        //     fullPath: true,
-        //     processOutput: function(assets) {
-        //         var now = Date.now();
-
-        //         for (var i in assets) {
-
-        //             for (var j in assets[i]) {
-
-        //                 assets[i][j] = assets[i][j] + "?v=" + now.toString();
-        //             }
-
-        //         }
-        //         return JSON.stringify(assets);
-        //     }
-        // })
-    ],
-    //使用webpack-dev-server，提高开发效率
-    devServer: {
-        contentBase: './',
-        host: 'localhost',
-        port: 5000, //默认8080
-        inline: true, //可以监控js变化
-        hot: true, //热启动
-    }
+        new webpack.HotModuleReplacementPlugin(), //热加载
+        new webpack.ProvidePlugin({
+            $:"jquery",
+            jQuery:"jquery",
+            "window.jQuery":"jquery"
+        })
+    ]
 }

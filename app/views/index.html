@@ -5,8 +5,138 @@
 {% endblock%}
 
 {% block body %}
-	<h1>{{title}}</h1>
-	<p>Welcome to {{title}}</p>
+	<div class="index-w">
+		<div class="source-list">
+			<header class="source-list-header">
+				<div class="filter">
+					<i class="iconfont icon-sousuo"></i>
+					<input class="filter-text" placeholder="搜索类别">
+				</div>
+			</header>
+			<section class="source-list-box">
+				<div class="list-box-tit">
+					<i class="iconfont icon-qianduan bold"></i>
+					<h2>前端</h2>
+					<em class="arrow arrow-up"></em>
+				</div>
+				<ul class="list-box-cnt">
+					<li class="list-item">
+						<img src="https://usepanda.com/img/source-icons/svg/designerNews.svg">
+						<h4>Designer News</h4>
+					</li>
+					<li class="list-item active">
+						<img src="https://usepanda.com/img/source-icons/svg/designerNews.svg">
+						<h4>Designer News</h4>
+					</li>
+				</ul>
+			</section>
+			<section class="source-list-box">
+				<div class="list-box-tit">
+					<i class="iconfont icon-houduan bold"></i>
+					<h2>后端</h2>
+					<em class="arrow arrow-left"></em>
+				</div>
+			</section>
+			<section class="source-list-box">
+				<div class="list-box-tit">
+					<i class="iconfont icon-shujuku"></i>
+					<h2>数据库</h2>
+					<em class="arrow arrow-left"></em>
+				</div>
+			</section>
+			<section class="source-list-box">
+				<div class="list-box-tit">
+					<i class="iconfont icon-jiagou"></i>
+					<h2>架构</h2>
+					<em class="arrow arrow-left"></em>
+				</div>
+			</section>
+			<section class="source-list-box">
+				<div class="list-box-tit">
+					<i class="iconfont icon-footer-news"></i>
+					<h2>即时快讯</h2>
+					<em class="arrow arrow-left"></em>
+				</div>
+			</section>
+		</div>
+		<div class="list-column">
+			<div class="list-column-header">
+				<div class="toolbar-w">
+					<div class="subsources">
+						<div class="select-container">
+							<div class="active-option">
+								<span class="option-text">home</span>
+								<i class="caret"></i>
+							</div>
+						</div>
+					</div>
+					<div class="search-button">
+						<i class="iconfont icon-sousuo"></i>
+					</div>	
+					<div class="hot-sorting">
+						<i class="iconfont icon-zuixindongtai"></i>
+						<span class="option-text">最新</span>
+					</div>	
+				</div>
+			</div>	
+			<ul class="list-column-cnt">
+				<li>
+					<div class="news-box">
+						<span class="number">1</span>
+						<div class="article-info">
+							<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+							<p class="article-detail">
+								<span>99赞</span>
+								<span>66评论</span>
+								<span>19小时前</span>
+								<span>知乎</span>
+							</p>
+						</div>
+					</div> 
+				</li>
+				<li>
+					<div class="news-box">
+						<span class="number">2</span>
+						<div class="article-info">
+							<h5 class="article-tit">透过 js-beautify@1.7.0 的 Bug 看，npm默认的lock机制是否重要？</h5>
+							<p class="article-detail">
+								<span>99赞</span>
+								<span>66评论</span>
+								<span>19小时前</span>
+								<span>知乎</span>
+							</p>
+						</div>
+					</div> 
+				</li>
+				<li>
+					<div class="news-box">
+						<span class="number">3</span>
+						<div class="article-info">
+							<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+							<p class="article-detail">
+								<span>99赞</span>
+								<span>66评论</span>
+								<span>19小时前</span>
+								<span>知乎</span>
+							</p>
+						</div>
+					</div> 
+				</li>
+			</ul>
+		</div>
+		<div class="article-preview">
+			<div class="article-preview-header">
+				<div class="preview-header-icon">
+					<a href="javascript:;">
+						<i class="iconfont icon-qianduan"></i>
+					</a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+					<a href="javascript:;"></a>
+				</div>
+			</div>	
+		</div>
+	</div>	
 {% endblock %}
 
 {% block js %}
