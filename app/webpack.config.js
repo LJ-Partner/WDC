@@ -62,7 +62,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("css/[name].css"),
-        new webpack.HotModuleReplacementPlugin(), //热加载
+        //new webpack.HotModuleReplacementPlugin(), //热加载
         new webpack.ProvidePlugin({
             $:"jquery",
             jQuery:"jquery",
