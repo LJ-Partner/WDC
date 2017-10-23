@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "pm2 start ./bin/www --watch",
-    "build":"webpack -w"
+    "build": "webpack -w"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -35,7 +35,9 @@
     "bluebird": "^3.5.1",
     "iconv-lite": "^0.4.19",
     "media-typer": "^0.3.0",
-    "file-loader": "^0.8.5"
+    "file-loader": "^0.8.5",
+    "consolidate": "^0.14.5",
+    "expose-loader": "^0.7.3"
   },
   "devDependencies": {
     
