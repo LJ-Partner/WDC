@@ -8,7 +8,7 @@ var routes = require('./routes/index');
 var cons   = require('consolidate');
 var app = express();
  
-// view engine setup
+// 模版引擎 设定
 app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
