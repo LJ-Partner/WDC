@@ -1,13 +1,17 @@
 var express = require('express');
 var router = express.Router();
 var Index = require('../controller/index');
-var articleDetail = require('../controller/detail');
+var articleDetail = require('../controller/article/detail');
 
+
+console.log(articleDetail.lists);
 /* GET home page. */
 
 router.get('/',Index.lists);
 
-router.get('/article/detail', articleDetail.lists);
+router.get('/a/:type/:name/detail/:id', articleDetail.lists);
+
+
 
 
 // router.all('*', function(req, res, next) {

@@ -1,6 +1,5 @@
 import "../fonts/iconfont.css";
 require('../less/index.less');
-require('../less/index.less');
 
 var COMMON = require('./common.js');
 

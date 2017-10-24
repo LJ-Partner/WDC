@@ -15,8 +15,8 @@ function rdom() {
 module.exports = {
     entry: {        
         index:'./public/js/index.js',
-        user:'./public/js/user.js',
-        article : './public/js/article/detail.js'
+        article : './public/js/article/detail.js',
+        dialog: './public/js/dialog.js'
     },
     output: {
         path: path.join(__dirname, './public/dist/'),

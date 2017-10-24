@@ -5,6 +5,8 @@ html,body{
 	width: 100%;
 	background: #f2f2f2;
 	overflow: hidden;
+	position: relative;
+	z-index: 1;
 }
 .main-content{
 	height: 100%;
@@ -15,6 +17,8 @@ html,body{
 	justify-content: flex-start;
 	background: #f4f8fb;
 	height: 100%;
+	position: relative;
+	z-index: 1;
 	.tootip{
 		&:before{
 			z-index: 1001;
@@ -681,6 +685,25 @@ html,body{
 						text-align: center;
 						display: block;
 						margin: 0 auto;
+					}
+					pre{
+						margin-bottom: 20px;
+						padding: 15px;
+						font-size: 13px;
+						word-wrap: normal;
+						word-break: break-all;
+						white-space: pre;
+						overflow: auto;
+						border-radius: 0;	
+						background: #f6f6f6;
+						color: #657b83;	
+						display: block;
+						border: 1px solid #ccc;
+					}
+					p{
+						a{
+							color: #3194d0;
+						}
 					}
 				}
 				.tag{

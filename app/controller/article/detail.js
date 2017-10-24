@@ -1,8 +1,7 @@
-var articleDetail = require('../models/index');
 exports.lists = function (req, res, next) {
-	res.render('index.html',
+	res.render('article/detail',
 		{
-			title:'web社区项目'
+			title:'文章详情'
 		}
 	);
 }

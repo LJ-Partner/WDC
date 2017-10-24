@@ -1,5 +1,31 @@
 @import 'mixins.less';
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-text-size-adjust: none;
+	/* 占位符 */
+	&::-webkit-input-placeholder {
 
+		/* WebKit browsers */
+		color: #99a6ab !important;
+	}
+	&:-moz-placeholder {
+
+		/* Mozilla Firefox 4 to 18 */
+		color: #99a6ab !important;
+	}
+	&::-moz-placeholder {
+
+		/* Mozilla Firefox 19+ */
+		color: #99a6ab !important;
+	}
+	&:-ms-input-placeholder {
+
+		/* Internet Explorer 10+ */
+		color: #99a6ab !important;
+	}
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,

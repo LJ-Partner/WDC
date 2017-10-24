@@ -29,7 +29,7 @@
 
 .icon-fangda:before { content: "\e668"; }
 
-.icon-gerenzhongxin_zhuye_gerenziliao:before { content: "\e669"; }
+.icon-gerenzhongxin:before { content: "\e669"; }
 
 .icon-huifu:before { content: "\e66a"; }
 
@@ -171,3 +171,10 @@
 
 .icon-biaoqing:before { content: "\e6af"; }
 
+.icon-yonghuming:before { content: "\e6b0"; }
+
+.icon-shoujihao:before { content: "\e6b1"; }
+
+.icon-mima:before { content: "\e6b2"; }
+
+.icon-guanbi:before { content: "\e6b3"; }
