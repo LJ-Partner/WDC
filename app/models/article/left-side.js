@@ -52,5 +52,29 @@ module.exports = [
 				tooltipIcon: 'yuyan'
 			}
 		]
+	},
+	{
+		name: '数据库',
+		icon: 'shujuku',
+		data: [
+			{	
+				icon: 'dbo',
+				name: 'db4o',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
+			}
+		]
+	},
+	{
+		name: '架构',
+		icon: 'jiagou',
+		data: [
+			{	
+				icon: 'fenbushifuwujiagou',
+				name: '分布式服务架构',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
+			}
+		]
 	}
 ];

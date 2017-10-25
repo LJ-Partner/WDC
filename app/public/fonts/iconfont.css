@@ -161,9 +161,9 @@
 
 .icon-jiagou:before { content: "\e6aa"; }
 
-.icon-houduan:before { content: "\e6ab"; }
+.icon-qianduan:before { content: "\e6ab"; }
 
-.icon-qianduan:before { content: "\e6ac"; }
+.icon-houduan:before { content: "\e6ac"; }
 
 .icon-sousuo:before { content: "\e6ad"; }
 
@@ -178,3 +178,7 @@
 .icon-mima:before { content: "\e6b2"; }
 
 .icon-guanbi:before { content: "\e6b3"; }
+
+.icon-guanbi1:before { content: "\e6b4"; }
+
+.icon-guanbi2:before { content: "\e6b5"; }

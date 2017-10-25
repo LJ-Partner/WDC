@@ -154,6 +154,7 @@ html,body{
 						position: relative;
 						z-index: 1;
 						padding: 16px 14px;
+						cursor: pointer;
 						i{
 							color: #556574;
 							margin: 0 16px 0 0;
@@ -215,6 +216,18 @@ html,body{
 									background: #3373d5;
 									color: #fff;
 								}
+								.bg-qianduan{
+									background: #3373d5; 
+								}
+								.bg-houduan{
+									background: #0a9e00; 
+								}
+								.bg-shujuku{
+									background: #2ea9df;
+								}
+								.bg-jiagou{
+									background: #6f1ff4;
+								}
 								h4{
 									overflow: hidden;
 									text-overflow: ellipsis;
@@ -230,6 +243,16 @@ html,body{
 									z-index: 1;
 								}
 							}
+							&:hover{
+								background: #f4f8fb;
+								border-left: 5px solid #2a3e52;
+								h4{
+									color: #273d4b;	
+								}
+							}
+							.icon-dbo,.icon-jiagou,.icon-nodejs{
+								font-size: 30px;
+							}
 						}
 						.active{
 							border-left: 5px solid #2a3e52;
@@ -238,6 +261,7 @@ html,body{
 						}
 					}
 				}	
+
 			}
 		}	
 	}
@@ -352,27 +376,32 @@ html,body{
 					    }
 					}
 				}
+				.search-bar-w{
+					flex: 1 1 auto;
+					input{
+						width: 100%;
+						border: 1px solid #eceef1;
+						height: 26px;
+						background: #fff;
+						border-radius: 2px;
+						background-clip: padding-box;
+						box-sizing: border-box;
+						font-family: Montserrat,sans-serif;
+						font-weight: 400;
+						font-style: normal;
+						font-size: 12px;
+						color: #9b9b9b;
+						vertical-align: top;
+						padding: 0 6px;
+						line-height: 26px;
+					}
+				}
 				.search-w{
 					.flex();
+					flex: 1 1 0;
 					justify-content: flex-end;
-					.search-button{
-						order: 2;
-					    width: 24px;
-					    height: 24px;
-					    line-height: 25px;
-					    font-size: 12px;
-					    text-align: center;
-					    border: 1px solid #eceef1;
-					    border-radius: 2px;
-					    font-weight: 700;
-					    cursor: pointer;
-					    color: #9B9B9B;
-					    transition: all .2s ease-out;
-					    background: #fff;
-					}
-					.hot-sorting{
-						order: 3;
-					    height: 24px;
+					a{
+						height: 24px;
 					    line-height: 25px;
 					    font-size: 12px;
 					    text-align: center;
@@ -384,8 +413,25 @@ html,body{
 					    transition: all .2s ease-out;
 					    background: #fff;
 					    padding: 0 6px;
+						&:hover{
+					    	color: #2a3e52;
+					    }
+					}
+					.search-button{
+						order: 2;
+						padding: 0 4px;
+					}
+					.hot-sorting{
+						order: 3;
 					    margin-left: 6px;
-					}	
+					}
+					.search-close{
+						order: 4;
+						margin: 0 0 0 6px;	
+						.icon-guanbi2{
+							font-size: 14px;
+						}
+					}
 				}
 			}	
 		}
@@ -507,6 +553,7 @@ html,body{
 								}
 							}
 							&:hover{
+								background: #f4f8fb;
 								.article-tag{
 									opacity: 1;
 								}
@@ -522,6 +569,10 @@ html,body{
 						}
 					}	
 				}	
+				.column-default{
+					.flex();
+					align-items: center;	
+				}
 			}
 		}
 	}
@@ -630,6 +681,13 @@ html,body{
 						p{
 							a{
 								color: #3194d0;
+							}
+						}
+						ul{
+							li{
+								a{
+									color: #3194d0;
+								}
 							}
 						}
 					}
