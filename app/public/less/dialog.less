@@ -2,21 +2,17 @@
 @-webkit-keyframes ngdialog-flyin {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-40px);
         transform: translateY(-40px)
     }
 
     100% {
         opacity: 1;
-        -webkit-transform: translateY(0);
         transform: translateY(0)
     }
 }
 
 .dialog-w{
 	.flex();
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     min-height: 100%;
     height: auto;
@@ -31,7 +27,6 @@
     padding:120px 0 20px 0;
     align-items: center;
     .dialog{
-		-webkit-animation: ngdialog-flyin .5s;
 		animation: ngdialog-flyin .5s;
 		background: #fff;
 		color: #444;
@@ -42,10 +37,6 @@
 		max-width: 100%;
 		position: relative;
 		width: auto;
-		-webkit-border-radius: 3px;
-		-webkit-background-clip: padding-box;
-		-moz-border-radius: 3px;
-		-moz-background-clip: padding;
 		border-radius: 3px;
 		background-clip: padding-box;	
 		.dialog-cnt{
@@ -87,10 +78,7 @@
 						font-family: Varela,'Helvetica Neue',Helvetica,sans-serif;
 						font-weight: 400;
 						font-style: normal;
-						-webkit-box-sizing: border-box;
-						-moz-box-sizing: border-box;
 						box-sizing: border-box;
-						-webkit-font-smoothing: antialiased;
 						border-radius: 6px;
 						border: 1px solid #eceef1;
 						color: #87969d;
@@ -150,7 +138,7 @@
 			}
 			.reg-box{
 				.form-row{
-					&:nth-child(2){
+					&:nth-child(3){
 						.flex();
 						.btn{
 							flex: 0 0 108px;

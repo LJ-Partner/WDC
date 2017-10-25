@@ -1,6 +1,7 @@
 ﻿var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var autoprefixer = require('autoprefixer');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 function rdom() {
@@ -33,7 +34,7 @@ module.exports = {
             loader: 'babel'
         }, {
             test: /\.less$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!less-loader")
         }, {
             test: /\.(png|jpg|gif)$/,
             loader: 'url-loader?limit=10000&name=images/[name].[ext]'

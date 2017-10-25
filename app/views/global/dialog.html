@@ -1,13 +1,13 @@
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/dist/css/dialog.css">
 {% endblock%}
-<div class="dialog-w">
+<div class="dialog-w hide">
 	<div class="dialog">
 		<div class="dialog-cnt">
 			<div class="dialog-scene"></div>
 			<h1 class="tit">注册</h1>
 			<p class="des">干货都是留给有准备的人</p>
-			<form class="form-box login-box" >
+			<form class="form-box login-box hide" >
 				<div class="form-row">
 					<input type="text" name="" placeholder="请您输入账户">
 					<i class="iconfont icon-yonghuming"></i>
@@ -28,7 +28,11 @@
 					</span>	
 				</p>
 			</form>
-			<form class="form-box reg-box" style="display:none">
+			<form class="form-box reg-box">
+				<div class="form-row">
+					<input type="text" name="" placeholder="请您输入用户名">
+					<i class="iconfont icon-yonghuming"></i>
+				</div>
 				<div class="form-row">
 					<input type="text" name="" placeholder="请您输入手机号">
 					<i class="iconfont icon-shoujihao"></i>
