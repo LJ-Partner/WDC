@@ -1,6 +1,7 @@
 import "../fonts/iconfont.css";
 module.exports = {
 	commentRelated : function () {
+		var flag=true,flag1=true;
 		$('.js-e-commentfocus').on('focus',function(){
 			var arr = $(this).siblings('.js-e-comment-slide').css('display');
 			if(arr == 'block' ){
@@ -24,19 +25,23 @@ module.exports = {
 			var type = $(this).attr('data-type');//1 一级回复， 2 2级回复
 			var show;
 			var text;
-			var flag  = true;
-			var flag1 = true;
 			if(type == '1'){
-				show = $(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').css('display');
-				if(flag = true){
-					$(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').toggle();	
+				flag = false;
+				if(!flag && flag1){
+					$(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').toggle();
 				}
 				$(this).parents('.comment-box').siblings('.sub-comment-list').find('.js-e-commentfocus').val(text);
 			}else if(type == '2'){
-				show = $(this).parents('.sub-comment-box').siblings('.new-comment-w').css('display');
 				text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
-				flag = false;
+				if(flag1){
+					$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideDown();
+					flag1 = false;	
+				}else{
+					$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideUp();
+					flag1 = true;
+				}
 				$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
+				flag = true;
 			}
 		});
 	}
