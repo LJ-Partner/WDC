@@ -1,3 +1,4 @@
+import "../fonts/iconfont.css";
 module.exports = {
 	commentRelated : function () {
 		$('.js-e-commentfocus').on('focus',function(){
@@ -18,42 +19,26 @@ module.exports = {
 			$(this).parents('.more-comment').siblings('.new-comment-w').toggle();
 			$(this).parents('.more-comment').siblings('.new-comment-w').find('.js-e-commentfocus').val('');
 		});
-		$('.j-e-repeat').on('click',function(){
-			var show = $(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').css('display');
-			if(show != 'block'){
-				$(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').slideDown();
-			}else{
-				$(this).parents('.comment-box').siblings('.sub-comment-list').find('.js-e-commentfocus').val('');
+		//回复
+		$('.j-e-repeat').unbind().on('click',function(){
+			var type = $(this).attr('data-type');//1 一级回复， 2 2级回复
+			var show;
+			var text;
+			var flag  = true;
+			var flag1 = true;
+			if(type == '1'){
+				show = $(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').css('display');
+				if(flag = true){
+					$(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').toggle();	
+				}
+				$(this).parents('.comment-box').siblings('.sub-comment-list').find('.js-e-commentfocus').val(text);
+			}else if(type == '2'){
+				show = $(this).parents('.sub-comment-box').siblings('.new-comment-w').css('display');
+				text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
+				flag = false;
+				$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
 			}
 		});
-
-		$('.j-e-sub-repeat').on('click',function(){
-			var show = $(this).parents('.sub-comment-box').siblings('.new-comment-w').css('display');
-			var text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
-			if(show != 'block'){
-				$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideDown();	
-			}else{
-				$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
-			}	
-		});
-
-		// $('.comment-w').each(function(){
-		// 	var len = $('.sub-comment-list .sub-comment-box').length;
-		// 	if(len > 3){
-		// 		$('.sub-comment-box').slice(3).hide();
-		// 		$('.j-e-unfolded').on('click',function(){
-		// 			($('.sub-comment-box').slice(3)).show();
-		// 			$(this).text('收起');	
-		// 			$(this).removeClass('j-e-unfolded').addClass('j-e-put-away');
-		// 			$('.j-e-put-away').on('click',function(){
-		// 				$('.sub-comment-box').slice(3).hide();	
-		// 				$(this).text('展开查看');
-		// 				$(this).addClass('j-e-unfolded').removeClass('j-e-put-away');
-		// 				return false;
-		// 			});	
-		// 		});	
-		// 	}
-		// });
 	}
 };
 
