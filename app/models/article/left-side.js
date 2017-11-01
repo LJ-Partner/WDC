@@ -1,5 +1,17 @@
 module.exports = [
 	{
+		name: '人工智能',
+		icon: 'rengongzhineng',
+		data: [
+			{	
+				icon: 'react',
+				name: '机器学习',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			}
+		]
+	},
+	{
 		name: '前端',
 		icon: 'qianduan',
 		data: [
