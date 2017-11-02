@@ -10,8 +10,7 @@
         transform: translateY(0)
     }
 }
-
-.dialog-w{
+.dialog-box{
 	.flex();
     box-sizing: border-box;
     min-height: 100%;
@@ -74,6 +73,7 @@
 					position: relative;
 					width: 100%;
 					margin-bottom: 14px;
+					color: #818790;
 					input{
 						font-family: Varela,'Helvetica Neue',Helvetica,sans-serif;
 						font-weight: 400;
@@ -104,7 +104,7 @@
 						color: #d3dee4;
 					}
 					a{
-						color: #dfe1e3;
+						color: #1fab89;
 					}
 					.btn{
 						border: none;
@@ -115,7 +115,10 @@
 						cursor: pointer;
 					}	
 					.btn-green{
-						background: #1fce66;
+						background: #1fab89;
+						&:hover{
+							background: #006741;
+						}
 					}
 					.btn-gray{
 						background: #d3dee4;
@@ -130,9 +133,9 @@
 				.tip{
 					font-size: 12px;
 					margin: 24px 0 0 0;
-					color: #818790;
+					color: #818791;
 					a{
-						color: #1fce66;
+						color: #1fab89;
 					}
 				}
 			}

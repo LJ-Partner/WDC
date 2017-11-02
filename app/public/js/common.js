@@ -1,5 +1,20 @@
 import "../fonts/iconfont.css";
 module.exports = {
+	login : function(){
+		$('.j-e-login').unbind().on('click',function(){
+			$('.dialog .tit').text('登录');
+			$('.dialog-w,.login-box').show();
+			$('.reg-box').hide();
+		});
+		$('.j-e-register').unbind().on('click',function(){
+			$('.dialog .tit').text('注册');
+			$('.dialog-w,.reg-box').show();
+			$('.login-box').hide();
+		});
+		$('.j-e-dialog-close').on('click',function(){
+			$('.dialog-w').hide();	
+		});
+	},
 	commentRelated : function () {
 		var flag=true,flag1=true;
 		$('.js-e-commentfocus').on('focus',function(){
@@ -43,6 +58,11 @@ module.exports = {
 				$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
 				flag = true;
 			}
+		});
+	},
+	attentionCat : function(){
+		$('.j-e-category-close').on('click',function(){
+			$('.attention-category-w').hide();
 		});
 	}
 };

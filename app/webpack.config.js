@@ -17,7 +17,10 @@ module.exports = {
     entry: {        
         index:'./public/js/index.js',
         article : './public/js/article/detail.js',
-        dialog: './public/js/dialog.js'
+        dialog: './public/js/dialog.js',
+        attentioncategory: './public/js/attention-category.js',
+        search: './public/js/search/index.js',
+        searchDetail: './public/js/search/detail.js'
     },
     output: {
         path: path.join(__dirname, './public/dist/'),

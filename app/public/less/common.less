@@ -119,23 +119,30 @@
 					display: inline-flex;
 					padding: 5px 12px;
 					text-align: center;
-					border: 1px solid #2ea9df;
-					color: #2ea9df;
+					border: 1px solid #1fab89;
+					color: #1fab89;
 					font-size: 16px;
 					cursor: pointer;
+					&:hover{
+						background: #006741;
+						color: #fff;
+						border: 1px solid #006741;
+					}
 				}
 				.login{
 					background: #fff;
 				}
 				.sign-up{
-					background: #2ea9df;
+					background: #1fab89;
 					color: #fff;
 				}	
 			}
+		}
+		.private{
 			.private-box{
 				position: absolute;
 				left: -152px;
-				top: 138%;
+				top: 42px;
 				z-index: 3;
 				width: 305px;
 				background-color: #fff;
@@ -217,8 +224,6 @@
 					}
 				}
 			}
-		}
-		.private{
 			&:hover{
 				.private-box{
 					display: block;

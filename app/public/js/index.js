@@ -63,4 +63,5 @@ $(function(){
 	} 
 	INDEX.init();
 	COMMON.commentRelated();
+	COMMON.login();
 });

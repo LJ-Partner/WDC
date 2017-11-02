@@ -1,0 +1,241 @@
+@import '../public.less';
+@import '../common.less';
+
+.search-w{
+	.search{
+		.search-header{
+			padding: 26px 14px 0 14px;
+			.search-header-top{
+				.flex();
+				justify-content: left;
+				align-items: center;
+				max-width: 1440px;
+				margin: 0 auto;
+				box-sizing: border-box;	
+				.logo{
+					margin: 0 18px 0 0;	
+				}
+				.search-box{
+					position: relative;
+					z-index: 1;
+					margin: 0 20px 0 0;
+					.search-input{
+						padding: 0 40px 0 20px;
+						height: 48px;
+						font-size: 14px;
+						transition: width .5s;
+						transition-delay: .1s;
+						color: #273d4b;
+						font-size: 20px;
+						border: none;
+						border-radius: 50px;
+						width: 600px;
+						background: #f4f8fb;
+						border: 1px solid #f4f8fb;
+						&:focus{
+							width: 800px;
+							border: 1px solid #1fab89;
+							box-shadow: 0 0 30px rgba(0,0,0,.1);
+						}
+					}
+					.search-btn{
+						position: absolute;
+						top: 4px;
+						right: 5px;
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+						padding: 0;
+						color: #969696;
+						text-align: center;
+						background: #1fab89;
+						border-radius: 20px;
+						color: #fff;
+						&:hover{
+							background: #006741;
+						}
+					}
+				}
+				.top-cat{
+					a{
+						padding: 8px 9px;
+						text-align: center; 
+						font-size: 14px;
+						margin: 0  14px 0 0;
+						background: #f4f8fb;
+						border-radius: 20px;
+						color: #2a3e52;
+						&:nth-child(2){
+							position: relative;
+							z-index: 1;
+							&:before{
+								content: "";
+								width: 6px;
+								height: 6px;
+								display: inline-block;
+								border-radius: 50%;
+								position: absolute;
+								right: -4px;
+								top: 0;
+								background: #f64040;	
+							}
+						}
+						&:hover{
+							background: #006741;
+							color: #fff;
+						}
+					}
+					.cur{
+						background: #1fab89;
+						color: #fff;
+					}
+				}	
+			}
+			.search-header-tags{
+				.flex();
+				justify-content: left;
+				max-width: 1440px;
+				margin: 20px auto;
+				box-sizing: border-box;
+				dt{
+					color: #010101;
+				}
+				dd{
+					a{
+						font-size: 16px;
+						color: #888;
+						padding: 0 15px;
+						&:hover{
+							color: #353535;
+						}
+					}
+				}
+			}
+			.search-header-tabs{
+				background: #f6f6f6;
+				height: 40px;
+				line-height: 40px;
+				ul{
+					.flex();
+					justify-content: left;
+					max-width: 1440px;
+					margin: 0 auto;
+					li{
+						margin: 0 52px 0 0;
+						a{
+							display: block;
+							color: #888;
+							font-size: 16px;
+							&:hover{
+								color: #000;
+								border-bottom: 2px solid #1fab89;
+							}
+						}
+					}
+					.cur{
+						a{
+							color: #000;
+							border-bottom: 2px solid #1fab89;	
+						}
+					}	
+				}
+			}
+		}
+		.search-main{
+			max-width: 1440px;
+			margin: 0 auto;
+			.search-main-cnt{
+				padding: 24px 0;
+				.search-main-list{
+					.tips{
+						font-size: 16px;	
+						color: #87969d;
+						margin: 0 0 38px 0;
+					}
+					.main-list{
+						.main-list-item{
+							max-width: 800px;
+							margin: 0 0 30px 0;
+							h2{
+								font-size: 16px;
+								font-weight: 600;
+								color: #1fab89;
+								em{
+									color: #ff9090;
+								}
+							}
+							.des{
+								line-height: 24px;
+								margin: 14px 0;
+							}
+							.info{
+								span{
+									margin: 0 20px 0 0;		
+									font-size: 14px;
+									color: #717171;
+								}
+								.green{
+									color: #1fab89;
+								}
+							}
+						}
+					}
+					.main-page{
+						.flex();
+						justify-content: left;
+						li{
+							
+							margin: 0 14px 0 0;
+							text-align: center;
+							a{
+								display: block;
+								color: #1fab89;
+								border: 1px solid #c5c5c5;
+								border-radius: 2px;
+								width: 22px;
+								height: 22px;
+								line-height: 22px;
+								&:hover{
+									background: #1fab89;
+									color: #fff;
+									border: 1px solid #1fab89;
+									&:after{
+										color: #fff;
+									}
+								}
+							}
+						}
+						.cur{
+							a{
+								background: #1fab89;
+								color: #fff;
+								border: 1px solid #1fab89;	
+							}
+						}
+						// .prev{
+						// 	a{
+						// 		&:hover{
+						// 			background: #fff;
+						// 			border: 1px solid #c5c5c5;
+						// 			color: #1fab89;
+						// 		}
+						// 	}
+						// }
+						.jump-next{
+							a{
+								&:after{
+									content: "\2022\2022\2022";
+									display: block;
+									letter-spacing: 1px;
+									color: #1fab89;
+									text-align: center;
+									font-size: 12px;
+								}	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

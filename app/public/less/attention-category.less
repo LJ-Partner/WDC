@@ -1,0 +1,104 @@
+@import 'public.less';
+@-webkit-keyframes ngdialog-flyin {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.attention-category-w{
+	.attention-category{
+		.flex();
+	    box-sizing: border-box;
+	    min-height: 100%;
+	    height: auto;
+	    background: rgba(42,62,82,.7);
+	    position: fixed;
+	    overflow: auto;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    z-index: 100;
+	    padding:120px 0;
+	    align-items: center;
+	    .category-box{
+		    animation: ngdialog-flyin 0.5s;
+		    background: #fff;
+		    color: #444;
+		    font-family: Montserrat;
+		    font-size: 13px;
+		    line-height: 20px;
+		    margin: 0 auto;
+		    max-width: 100%;
+		    position: relative;
+		    width: 50%;
+		    border-radius: 3px;
+		    background-clip: padding-box;
+		    padding: 46px 0;
+		    .category-box-tit{
+		    	font-size: 20px;
+		    	color: #273d4b;
+		    	padding: 16px 0 16px 0;
+		    	text-align: center;
+		    }
+		    .category-box-cnt{
+	    		padding: 0 42px;
+	    		.category-box-item{
+	    			dt{
+	    				font-size: 18px;
+	    				color: #273d4b;
+	    				padding: 0 0 8px 0;
+	    				border-bottom: 1px dashed #cacaca;
+	    			}
+	    			dd{
+	    				padding: 16px 0;
+	    				.flex();
+	    				flex-wrap:wrap;
+	    				justify-content: left;
+	    				a{
+	    					padding: 2px 12px;
+	    					border-radius: 30px;
+	    					border: 1px solid #ff9090;
+	    					font-size: 14px;
+	    					color: #ff9090;
+	    					margin: 0 14px 20px 0;
+	    					&:hover{
+	    						color: #fff;
+	    						background: #ff9090; 
+	    					}
+	    				}
+	    				.cur{
+	    					color: #fff;
+	    					background: #ff9090;	
+	    				}
+	    			}
+	    		}
+	    	}
+	    	.btn{
+	    		display: block;
+	    		width: 172px;
+	    		height: 38px;
+	    		text-align: center;
+	    		line-height: 38px;
+	    		background: #ff9090;
+	    		color: #fff;
+	    		font-size: 16px;	
+	    		border-radius: 19px;
+	    		margin: 0 auto;
+	    	}
+	    	.category-close{
+	    		border-radius: 5px;
+				cursor: pointer;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				color: #717171;
+	    	}
+	    }
+	}
+}
