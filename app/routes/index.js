@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
-var Index = require('../controller/index');
-var articleList = require('../controller/article/list');
-var articleDetail = require('../controller/article/detail');
+const express = require('express');
+const router = express.Router();
+const Index = require('../controller/index');
+const articleList = require('../controller/article/list');
+const articleDetail = require('../controller/article/detail');
 
-var searchIndex = require('../controller/search/index');
-var searchDetail = require('../controller/search/detail');
+const searchIndex = require('../controller/search/index');
+const searchDetail = require('../controller/search/detail');
 /* GET home page. */
 router.get('/',Index.lists);
 router.get('/a/:type/:name', articleList.lists);
