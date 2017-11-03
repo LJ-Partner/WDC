@@ -42,5 +42,6 @@
     "postcss-loader": "^2.0.8"
   },
   "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1"
   }
 }

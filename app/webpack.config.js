@@ -2,6 +2,7 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require('autoprefixer');
+var AssetsPlugin = require('assets-webpack-plugin');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 function rdom() {
@@ -69,6 +70,25 @@ module.exports = {
             $:"jquery",
             jQuery:"jquery",
             "window.jQuery":"jquery"
+        }),
+        new AssetsPlugin({
+            filename: 'fry.map.json',
+            path: path.join(__dirname, './public/dist/'),
+            prettyPrint: true,
+            fullPath: true,
+            processOutput: function(assets) {
+                var now = Date.now();
+
+                for (var i in assets) {
+
+                    for (var j in assets[i]) {
+
+                        assets[i][j] = assets[i][j] + "?v=" + now.toString();
+                    }
+
+                }
+                return JSON.stringify(assets);
+            }
         })
     ]
 }

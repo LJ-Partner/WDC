@@ -1,0 +1,456 @@
+{% extends '../layout/layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{loadmap.css}}">
+{% endblock%}
+
+{% block body %}
+	{% include "../global/head-top.html" ignore missing %}
+	<div class="index-w">
+		<div class="source-list-w">
+			<div class="source-list">
+				<header class="source-list-header">
+					<div class="filter">
+						<i class="iconfont icon-sousuo"></i>
+						<input class="filter-text j-e-search-focus"  placeholder="搜索类别">
+					</div>
+				</header>
+				<div class="source-list-cnt scrollbar">
+					{% for catList in leftSide %}
+						<div class="source-list-box">
+							<div class="list-box-tit j-e-cat-click">
+								<i class="iconfont icon-{{catList.icon}}"></i>
+								<h2>{{catList.name}}</h2>
+								<em class="arrow arrow-up"></em>
+							</div>
+							<ul class="list-box-cnt j-e-cat-list-slide">
+								{% for item in catList.data %}
+								<li class="list-item">
+									<a href="javascript:;">
+										{% if item.icon %}
+											<em class="bg-{{catList.icon}}">
+												<i class="iconfont icon-{{item.icon}}"></i>
+											</em>	
+										{% endif %}										
+										<h4>{{item.name}}</h4>
+										<span class="tootip tootip-left" data-tooltip="{{item.tooltip}}">
+											<i class="iconfont icon-{{item.tooltipIcon}}"></i>
+										</span>	
+									</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endfor %}
+				</div>
+			</div>	
+		</div>
+		<div class="list-column">
+			<div class="list-column-header">
+				<div class="toolbar-w">
+					<div class="subsources">
+						<div class="select-container">
+							<div class="active-option">
+								<span class="option-text j-e-select-text">介绍</span>
+								<i class="caret"></i>
+							</div>
+							<div class="select-options">
+								<ul class="select-options-list">
+									<li class="select-option j-e-select-click">
+										<span class="option-text">安装配置</span>
+									</li>	
+									<li class="select-option j-e-select-click">
+										<span class="option-text">问题解决</span>
+									</li>
+									<!-- <li class="select-option">
+										<span class="option-text">练手</span>
+									</li>	
+									<li class="select-option">
+										<span class="option-text">吐槽</span>
+									</li>
+									<li class="select-option">
+										<span class="option-text">实际案例</span>
+									</li>
+									<li class="select-option">
+										<span class="option-text">教程</span>
+									</li>
+									<li class="select-option">
+										<span class="option-text">疑惑</span>
+									</li> -->
+								</ul>	
+							</div>
+						</div>
+					</div>
+					<div class="search-bar-w hide">
+						<input type="text" name="" placeholder="请输入搜索关键字">	
+					</div>
+					<div  class="search-w">
+						<a class="search-button j-e-search-key">
+							<i class="iconfont icon-sousuo"></i>
+						</a>
+						<a class="hot-sorting">
+							<i class="iconfont icon-zuixindongtai"></i>
+							<span class="option-text">最新</span>
+						</a>	
+						<a class="search-close hide j-e-close-search-key">
+							<i class="iconfont icon-guanbi2"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="column-container">
+				<div class="content-inc">
+					<div class="column-scrollable scrollbar">
+						<ul class="list-column-cnt">
+							<li> <!--visited-->
+								<a href="javascript:;" class="news-box">
+									<span class="number">1</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">2</span>
+									<div class="article-info">
+										<h5 class="article-tit">透过 js-beautify@1.7.0 的 Bug 看，npm默认的lock机制是否重要？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">3</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">4</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<div class="article-comment-avatar">
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<span class="total-num">
+												+10
+											</span>
+										</div>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">5</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">6</span>
+									<div class="article-info">
+										<h5 class="article-tit">透过 js-beautify@1.7.0 的 Bug 看，npm默认的lock机制是否重要？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">7</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">8</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<div class="article-comment-avatar">
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<span class="total-num">
+												+10
+											</span>
+										</div>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">9</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">10</span>
+									<div class="article-info">
+										<h5 class="article-tit">透过 js-beautify@1.7.0 的 Bug 看，npm默认的lock机制是否重要？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">11</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<p class="article-detail">
+											<span>99赞</span>
+											<span>66评论</span>
+											<span>19小时前</span>
+											<span>知乎</span>
+										</p>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+							<li>
+								<a href="javascript:;" class="news-box">
+									<span class="number">12</span>
+									<div class="article-info">
+										<h5 class="article-tit">如何评价百度刚刚开源的mobile-deep-learning？</h5>
+										<div class="article-comment-avatar">
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<em>
+												<img src="/img/avatar1.png">
+											</em>
+											<span class="total-num">
+												+10
+											</span>
+										</div>
+									</div>
+									<div class="article-tag tootip tootip-left" data-tooltip="aaaaa">
+										<i class="iconfont icon-shoucang"></i>
+									</div>
+								</a> 
+							</li>
+						</ul>	
+					</div>
+					<div class="column-default hide">
+						<div class="column-default-info">
+							<!-- <img src="https://usepanda.com/app/img/panda-face-hushed.svg">	 -->
+						</div>			
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="article-preview">
+			<div class="article-preview-detail">
+				<div class="article-preview-header">
+					<div class="preview-header-icon">
+						<a href="javascript:;">
+							<i class="iconfont icon-shoucang"></i>
+						</a>
+						<a href="javascript:;">
+							<i class="iconfont icon-shuxie"></i>	
+						</a>
+						<a href="/a/fe/vue/detail/1" target="_blank">
+							<i class="iconfont icon-fangda"></i>
+						</a>
+						<a href="javascript:;">
+							<i class="iconfont icon-fenxiang"></i>
+						</a>
+					</div>
+				</div>	
+				<div class="article-preview-cnt scrollbar">
+					<div class="article">
+						<h1 class="tit">
+							如何评价百度刚刚开源的mobile-deep-learning？	
+						</h1>
+						<div class="author">
+							<a href="javascript:;" class="avatar">
+								<img src="/img/avatar2.png">
+							</a>
+							<div class="info">
+								<span class="origin">知乎</span>
+								<span class="publish-time"> 2017-9-27</span>
+							</div>
+							<a href="javascript:;" class="btn btn-follow">+关注</a>
+						</div>
+						{% include "../common/detail.html" ignore missing %}	
+					</div>
+				</div>	
+			</div>
+			<div class="article-preview-default hide">
+				<div class="empty-pic"></div>	
+			</div>
+		</div>
+	</div>	
+	{% include "../common/dialog.html" ignore missing %}
+	{% include "../common/attention-class.html" ignore missing %}
+{% endblock %}
+
+
+
+{% block js %}
+<script type="text/javascript" src="{{loadmap.js}}"></script>
+{% endblock %}
