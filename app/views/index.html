@@ -1,4 +1,4 @@
-{% extends './layout.html' %}
+{% extends './layout/layout.html' %}
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/dist/css/index.css">
@@ -436,180 +436,7 @@
 							</div>
 							<a href="javascript:;" class="btn btn-follow">+关注</a>
 						</div>
-						<div class="show">
-							<p>最近开始研究MySQL和MongoDB，发现这方面资料不多。尤其是真正的说到点子上的文章，太少了。</p>
-<p>有一些对比测试的文章基本上都是瞎测，测试方法都测到了马腿上，得出的结论基本上都是NoSQL毫无价值</p>
-<p>容我借用Russell Smith 的那句话：不是MongoDB不行，是你不懂。</p>
-<p>让我来分析一下MongoDB的真正性能吧。</p>
-<p>有说MongoDB慢</p>
-<p>　　反对：不设其他唯一索引的情况下，只用_id 在普通办公电脑上每秒插入几万，在普通x86服务器上每秒插入十几万，你好意思说这个性能低？比mysql强出一个数量级。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 赞同：检索是真的慢，和sql数据库不同，越复杂的条件搜索MangoDB越吃亏，CPU和IO的双重压力。面对那些直接把SQL查询改写成MangoDB的用法，别转了，你不会收获任何性能提升。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 你不行：说你不行还是真的不行，MongoDB领导了NoSQL运动，NoSQL请注意，我们最主要反对的就是SQL的方法论，按SQL方法使用MangoDB你只能收获失望。再想想MongoDB的设计思想：文档化。_id 就是文件名，MongoDB是个文件系统。全文检索？别闹了，用文件名找文件，一个文件名对应一个文件，你绝对不会失望。</p>
-<p>那么MongoDB究竟应该怎么用呢？</p>
-<h2>首先，忘记SQL</h2>
-<p>你应该忘记你学过的那些优雅无敌的SQL，不是说为了提升检索性能，扔索引就有好处。</p>
-<p>有一个简单的事实如下：只有一个默认的_id 索引，此时插入性能为1，你再加一个索引，插入性能约1/2,再加一个约1/3 ,以此类推......</p>
-<p>如果这个事实对你是很震撼的，那说明你还没有忘记SQL，接着忘。</p>
-<p>MongoDB的索引对插入性能有着不可忽略的拖后腿效应，所以，我们应该使用且仅使用 _id 作为插入key，作为查询key，作为所有的那个key。</p>
-<h2>其次，直接忘记搜索这件事。</h2>
-<p>把MongoDB当做你的硬盘，给他文件名去操作文件.这就是Key-Value数据库的做法，你稍加设计就能这么用。</p>
-<p>那么其实你所有的操作可以简化为两个指令，逻辑上 就是一个字典</p>
-<p>你给他_id,往字典里插一个数据，或者拿一个数据。</p>
-<p>Save({_id:xxx,.....})</p>
-<p>FindOne({_id:xxx})</p>
-<p>要想高性能，善用那个_id,把你原来准备当主键的那个玩意，hash成_id.</p>
-<p>把你原来准备的查询条件，什么？查询，拿_id来，别的全砍掉。</p>
-<h2>第三、这不是数据表</h2>
-<p>记住，这不是数据表，一个_id对应的东西不是一行数据，而是一个文件。</p>
-<p>文件存储和表存储有什么不同呢？</p>
-<p>我举个例子，比如我们要存储用户列表和每个用户的道具列表。</p>
-<p>数据表的做法是建一张用户表，一张道具表，道具表里有个字段表示他属于哪个用户。</p>
-<p>然后，你就离不开万恶的查询了。</p>
-<p>然后如果一个用户有100条道具，100万用户意味着道具表有一亿条记录。</p>
-<p>这时候就开始考验你的小数据库了，但这都是过去式了，这一亿的道具，用MongoDB，根本不是个事儿</p>
-<p>因为MongoDB的方法是当做文件存，只设计一个用户集合，每个用户的信息是一个文件，然后这100个道具就分开存在每个用户的文件里。</p>
-<p>然后来比较一下，我们取得用户的记录，然后从中拿出100个道具，NoSQL方法。</p>
-<p>查一亿的表，找出属于某个用户的记录。</p>
-<p>熟快熟慢？</p>
-<p>然后你可能回想，SQL方法，我也可以搞个道具字段，把用户的100个道具用某种协议打包，然后操作啊，一样可以取得巨大的优化呀。</p>
-<p>没错，你的想法很好，你正在用NOSQL的方式用SQL。</p>
-<h2>第四、文件存储的精华之处</h2>
-<p>如果问题止于此处，MongoDB就毫无优势可言了，如果这个方法在SQL数据库上也是如此容易使用，那还费劲搞MongoDB干什么？</p>
-<p>我们再折腾一点，如果每个道具还要存100条转手记录，你还是可以打包，但你这个打包字段已经1M了。</p>
-<p>于是每次存取这个打包字段都是一个系统工程了，还要负担1M的流量。</p>
-<p>MongoDB这边呢？我们可以直接对文件的一部分进行读写，比如我只返回一个用户的第二个道具的信息，和返回第二个道具的第1~30条转手记录。</p>
-<p>这，是一种怎样的差距啊。</p>
-<p>你想要一张美女的照片，你朋友有，但是他只有一个压缩包，他那里没有解包工具，于是他把整个包传给了你。他想问你要一张照片，但是他没有压缩工具，为了存档需要，他让你再压进包里传给他。</p>
-<p>这个朋友就是你的用户表的一行，如果换成真实世界的事件是多么的不可思议，这就是在一个字段里打包数据的问题。</p>
-<p>MongoDB的一条记录就是一个脑筋更正常的朋友，你要他一张照片，他从包里找出来给你。你给他一张照片，他分门别类的放置到他的包里去。</p>
-<p>用文件的思维去访问，MongoDB是一个更好的朋友。</p>
-<p>审视一下你项目中的大部分的数据需求，是不是都可以用这种方式去组织呢？</p>
-<p>如果是，加入NOSQL吧，我们的口号是：很暴力不SQL</p>
-<h2>还有什么好处&nbsp;</h2>
-<p>1.不用逻辑关心的水平切分</p>
-<p>　　无需多言，对MongoDB而言，这是运维人员的工作了</p>
-<p>2.不用对齐的数据结构</p>
-<p>　　不用对齐意味着你不用为以前表结构变化的迁移烦恼，有些文件里有一个部分，有些没有，这对MongoDB而言，很正常。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<h2>&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-<p>&nbsp;</p>	
-						</div>
-						<div class="tag">
-							<a href="javascript:;">前端</a>
-							<a href="javascript:;">百度</a>
-							<a href="javascript:;">深度学习(Deep Learning)</a>
-						</div>
-						<div class="share">
-							<a href="javascript:;">
-								<i class="iconfont icon-shoucang"></i>
-							</a>
-							<a href="javascript:;">
-								<i class="iconfont icon-fenxiang"></i>
-							</a>	
-						</div>
-						<div class="like">
-							<a href="javascript:;" class="btn btn-like">
-								<i class="iconfont icon-dianzanhou"></i>
-								<span>99</span>
-							</a>
-						</div>
-						<div class="comment">
-							<div class="comment-tit">
-								<span>66条评论</span>
-								<em class="line"></em>	
-							</div>
-							<form class="new-comment">
-								<a class="avatar"><img src="/img/avatar2.png"></a>
-								<div class="write-msg">
-									<textarea class="js-e-commentfocus" placeholder="写下你的评论..."></textarea>	
-									<div class="send-detail-w js-e-comment-slide">
-										<div class="send-detail">
-											<a class="emoji" href="javascript:;">
-												<i class="iconfont icon-biaoqing"></i>
-											</a>
-											<div class="btn-w">
-												<a class="btn cancel js-e-commentcancel">取消</a>
-												<a class="btn btn-send">发表</a>	
-											</div>
-										</div>	
-									</div>
-								</div>
-							</form>
-							<div class="comment-list">
-								<div class="comment-w">
-									<div class="comment-box">
-										<div class="author">
-											<a href="javascript:;" class="avatar">
-												<img src="/img/avatar2.png">
-											</a>
-											<div class="info">
-												<a href="javascript:;">雷神</a>
-												<span>1楼 1小时前</span>
-											</div>
-										</div>
-										<div class="comment-wrap">
-											<p>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</p>
-											<div class="tool-group">
-												<a>
-													<i class="iconfont icon-dianzanhou"></i>
-													<span>71人赞</span>
-												</a>
-												<a class="j-e-repeat" data-type="1" href="javascript:;">
-													<i class="iconfont icon-huifu"></i>
-													<span>回复</span>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="sub-comment-list">
-										<div class="sub-comment-box">
-											<p>
-												<a href="javascript:;">地虎：</a>
-												<span>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</span>
-											</p>
-											<div class="sub-tool-group">
-												<a>
-													<i class="iconfont icon-dianzanhou"></i>
-													<span>71人赞</span>
-												</a>
-												<a class="j-e-repeat" data-type="2" href="javascript:;">
-													<i class="iconfont icon-huifu"></i>
-													<span>回复</span>
-												</a>
-											</div>	
-										</div>
-										<div class="more-comment">
-											<a class="add-comment-btn j-e-commentadd">
-												<i class="iconfont icon-pencil"></i>
-												<span>添加新评论</span>
-											</a>
-											<span class="line-wrap">
-												还有<em class="moreover-num">5</em>条评论，<a href="javascript:;" class="expand-view j-e-unfolded ">展开查看</a>
-											</span>
-										</div>
-										<div class="new-comment-w">
-											<form class="new-comment">
-												<div class="write-msg">
-													<textarea class="js-e-commentfocus" placeholder="写下你的评论..."></textarea>	
-													<div class="send-detail-w js-e-comment-slide">
-														<div class="send-detail">
-															<a class="emoji" href="javascript:;">
-																<i class="iconfont icon-biaoqing"></i>
-															</a>
-															<div class="btn-w">
-																<a class="btn cancel js-e-commentcancel">取消</a>
-																<a class="btn btn-send">发表</a>	
-															</div>
-														</div>	
-													</div>
-												</div>
-											</form>	
-										</div>
-									</div>	
-								</div>
-								
-							</div>
-						</div>
+						{% include "./common/detail.html" ignore missing %}	
 					</div>
 				</div>	
 			</div>
@@ -618,8 +445,8 @@
 			</div>
 		</div>
 	</div>	
-	{% include "./dialog.html" ignore missing %}
-	{% include "./attention-class.html" ignore missing %}
+	{% include "./common/dialog.html" ignore missing %}
+	{% include "./common/attention-class.html" ignore missing %}
 {% endblock %}
 
 

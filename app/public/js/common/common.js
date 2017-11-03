@@ -1,4 +1,4 @@
-import "../fonts/iconfont.css";
+import "../../fonts/iconfont.css";
 module.exports = {
 	login : function(){
 		$('.j-e-login').unbind().on('click',function(){

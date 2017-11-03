@@ -1,4 +1,4 @@
-{% extends '../layout.html' %}
+{% extends '../layout/layout.html' %}
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/dist/css/searchDetail.css">
@@ -8,41 +8,150 @@
 	{% include "../global/head-top.html" ignore missing %}
 	<div class="search-detail-w">
 		<div class="search-detail">
-			<div class="search-detail-header">
-				<div class="detail-header-left">
-					<div class="tag">
-						<a href="javascript:;">前端</a>
-						<a href="javascript:;">百度</a>
-						<a href="javascript:;">深度学习</a>
+			<div class="search-detail-header-w">
+				<div class="search-detail-header">
+					<div class="detail-header-left">
+						<div class="tag">
+							<a href="javascript:;">前端</a>
+							<a href="javascript:;">百度</a>
+							<a href="javascript:;">深度学习</a>
+						</div>
+						<h2>如何评价百度刚刚开源的mobile-deep-learning？</h2>
+						<ul class="info">
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-huifu"></i>
+									<span>66条评论</span>
+								</a>
+							</li>	
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-fenxiang"></i>
+									<span>分享好友</span>	
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-shoucang"></i>
+									<span>干货收藏</span>	
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-suoxiao"></i>
+									<span>缩小返回</span>	
+								</a>
+							</li>
+						</ul>
+					</div>	
+					<div class="detail-header-right">
+						<div class="right-num-box">
+							<p>关注者</p>
+							<span>32321</span>
+						</div>	
+						<div class="right-num-box">
+							<p>浏览量</p>
+							<span>666615879797</span>
+						</div>
+					</div>	
+				</div>	
+			</div>
+			<div class="search-detail-main">
+				<div class="search-detail-main-tit">
+					<h1>梦想总是要有的，万一实现了呢</h1>	
+					<a>
+						<i class="iconfont icon-huifu"></i>
+						<span>查看所有文章</span>
+					</a>
+				</div>
+				<div class="search-detail-main-cnt">
+					<div class="detail-main-left">
+						<div class="article">
+							<div class="author">
+								<a href="javascript:;" class="avatar">
+									<img src="/img/avatar2.png">
+								</a>
+								<div class="info">
+									<h2>雷神</h2>
+									<p>前端工程师#css#html</p>
+								</div>
+							</div>
+							{% include "../common/detail.html" ignore missing %}	
+						</div>			
+					</div>	
+					<div class="detail-main-right">
+						<div class="side-box about-box">
+							<h3 class="side-box-tit about-box-tit">
+								关于作者
+							</h3>
+							<div class="side-box-cnt about-box-cnt">
+								<div class="author">
+									<a class="avatar">
+										<img src="/img/avatar3.png">
+									</a>
+									<div class="info">
+										<h4>雷神</h4>	
+										<p>Just do it</p>
+									</div>
+								</div>
+								<p class="des">前端工程师 # css # html</p>
+								<div class="data">
+									<dl>
+										<dt>回答</dt>
+										<dd>66</dd>
+									</dl>
+									<dl>
+										<dt>文章</dt>
+										<dd>66</dd>
+									</dl>
+									<dl>
+										<dt>关注者</dt>
+										<dd>66</dd>
+									</dl>
+								</div>
+								<div class="relate">
+									<a href="javascript:;"></a>
+									<a href="javascript:;">
+										<i class="iconfont icon-huifu"></i>
+										<span>发私信</span>
+									</a>
+								</div>	
+							</div>
+						</div>	
+						<div class="side-box ad-box">
+							<div class="ad-box-pic">
+								<img src="/img/ad-pic1.png">
+							</div>
+						</div> 
+						<div class="side-box article-box">
+							<h3 class="side-box-tit">
+								相关文章
+							</h3>	
+							<ul class="side-box-cnt">
+								<li>
+									<a href="javascript:;">BRETT 机器人算有「学习」的能力么？</a>	
+									<span>44356浏览量</span>
+								</li>
+								<li>
+									<a href="javascript:;">谷歌智能车的难点在哪里？模式识别，还是分析、控制算法？</a>	
+									<span>67656浏览量</span>
+								</li>
+								<li>
+									<a href="javascript:;">如何在计算机中模拟一个生命，并让它进化出自我思维？</a>	
+									<span>57856浏览量</span>
+								</li>
+								<li>
+									<a href="javascript:;">机器学习应补充哪些数学基础？</a>	
+									<span>68856浏览量</span>
+								</li>
+								<li>
+									<a href="javascript:;">深度学习目前主要有哪些研究方向?</a>	
+									<span>68856浏览量</span>
+								</li>
+							</ul>
+						</div> 		
 					</div>
-					<h2>如何评价百度刚刚开源的mobile-deep-learning？</h2>
-					<ul class="info">
-						<li>
-							<a href="javascript:;">
-								<i class="iconfont icon-huifu"></i>
-								<span>66条评论</span>
-							</a>
-						</li>	
-						<li>
-							<a href="javascript:;">
-								<i class="iconfont icon-fenxiang"></i>
-								<span>分享好友</span>	
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<i class="iconfont icon-shoucang"></i>
-								<span>干货收藏</span>	
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<i class="iconfont icon-suoxiao"></i>
-								<span>缩小返回</span>	
-							</a>
-						</li>
-					</ul>
-				</div>			
+				</div>
 			</div>	
 		</div>
 	</div>

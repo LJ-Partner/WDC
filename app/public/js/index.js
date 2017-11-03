@@ -1,5 +1,5 @@
 require('../less/index.less');
-var COMMON = require('./common.js');
+var COMMON = require('./common/common.js');
 $(function(){
 	var INDEX = {
 		init : function(){
