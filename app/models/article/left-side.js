@@ -92,6 +92,30 @@ module.exports = [
 				name: '分布式服务架构',
 				tooltip: '语言',
 				tooltipIcon: 'yuyan'
+			},
+			{	
+				icon: 'fenbushifuwujiagou',
+				name: '分布式服务架构',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
+			},
+			{	
+				icon: 'fenbushifuwujiagou',
+				name: '分布式服务架构',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
+			},
+			{	
+				icon: 'fenbushifuwujiagou',
+				name: '分布式服务架构',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
+			},
+			{	
+				icon: 'fenbushifuwujiagou',
+				name: '分布式服务架构',
+				tooltip: '语言',
+				tooltipIcon: 'yuyan'
 			}
 		]
 	}

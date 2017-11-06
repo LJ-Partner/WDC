@@ -16,7 +16,7 @@ function rdom() {
 }
 module.exports = {
     entry: {        
-        index:'./public/js/index.js',
+        index:'./public/js/article/index.js',
         search: './public/js/search/index.js',
         searchDetail: './public/js/search/detail.js'
     },

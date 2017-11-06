@@ -1,7 +1,7 @@
-@import './common/common.less';
-@import './common/detail.less';
-@import './common/dialog.less';
-@import './common/attention-category.less';
+@import '../common/common.less';
+@import '../common/detail.less';
+@import '../common/dialog.less';
+@import '../common/attention-category.less';
 html,body{
 	height: 100%;
 	width: 100%;
@@ -149,124 +149,127 @@ html,body{
 				height: calc(~"100% - 45px");
 				overflow-y: auto;
 				background: #fff;
-				.source-list-box{
-					.list-box-tit{
-						.flex();
-						align-item: center;
-						position: relative;
-						z-index: 1;
-						padding: 16px 14px;
-						cursor: pointer;
-						i{
-							color: #556574;
-							margin: 0 16px 0 0;
-						}
-						.bold{
-							font-weight: bold;
-						}	
-						h2{
-							flex: 1 1 auto;
-						}
-						.arrow{
+				.source-list-box-w{
+					padding: 0 0 60px 0;
+					.source-list-box{
+						.list-box-tit{
+							.flex();
+							align-item: center;
 							position: relative;
-							z-index: 1;	
-							&:before{
-								width: 0px;
-								height: 0px;
-								border-width: 8px;
-								border-style: solid;
-								content: "";
-								position: absolute;
-								right: 0;
+							z-index: 1;
+							padding: 16px 14px;
+							cursor: pointer;
+							i{
+								color: #556574;
+								margin: 0 16px 0 0;
 							}
-						}
-						.arrow-up{
-							&:before{
-								border-color: #546473 transparent transparent transparent;
-								top: 4px;	
+							.bold{
+								font-weight: bold;
+							}	
+							h2{
+								flex: 1 1 auto;
 							}
-						}
-						.arrow-left{
-							&:before{
-								border-color: transparent #546473  transparent transparent;
-								bottom: 4px;	
-							}
-						}
-					}
-					.list-box-cnt{
-						.list-item{
-							a{
-								.flex();
-								text-align: left;
-								justify-content: inherit;
-								align-items: center;
+							.arrow{
 								position: relative;
-								padding: 5px 14px;
-								height: 30px;
-								color: #87969d;
-								cursor: pointer;
-								user-select: none;
-								transition: all .2s ease-out;
-								em{
-									flex: 0 0 30px;
-									height: 30px;
-									border-radius: 3px;
-									margin: 0 10px 0 0;
-									overflow: hidden;
-									text-align: center;
-									line-height: 30px;
-									background: #3373d5;
-									color: #fff;
-								}
-								.bg-rengongzhineng{
-									background: #ec4989; 
-								}
-								.bg-qianduan{
-									background: #3373d5; 
-								}
-								.bg-houduan{
-									background: #0a9e00; 
-								}
-								.bg-shujuku{
-									background: #2ea9df;
-								}
-								.bg-jiagou{
-									background: #6f1ff4;
-								}
-								h4{
-									overflow: hidden;
-									text-overflow: ellipsis;
-									white-space: nowrap;
-									flex: 1 1 auto;
-								}
-								span{
-									border: 1px solid #edeef0;
-									color: #8e9ca3;
-									padding: 2px;
-									border-radius: 2px;
-									position: relative;
-									z-index: 1;
+								z-index: 1;	
+								&:before{
+									width: 0px;
+									height: 0px;
+									border-width: 8px;
+									border-style: solid;
+									content: "";
+									position: absolute;
+									right: 0;
 								}
 							}
-							&:hover{
-								background: #f4f8fb;
-								border-left: 5px solid #2a3e52;
-								h4{
-									color: #273d4b;	
+							.arrow-down{
+								&:before{
+									border-color: #546473 transparent transparent transparent;
+									top: 4px;	
 								}
 							}
-							.icon-dbo,.icon-jiagou,.icon-nodejs{
-								font-size: 30px;
+							.arrow-left{
+								&:before{
+									border-color: transparent #546473  transparent transparent;
+									bottom: 4px;	
+								}
 							}
 						}
-						.active{
-							border-left: 5px solid #2a3e52;
-						    color: #2a3e52;
-						    background: #f4f8fb;
+						.list-box-cnt{
+							.list-item{
+								a{
+									.flex();
+									text-align: left;
+									justify-content: inherit;
+									align-items: center;
+									position: relative;
+									padding: 5px 14px;
+									height: 30px;
+									color: #87969d;
+									cursor: pointer;
+									user-select: none;
+									transition: all .2s ease-out;
+									em{
+										flex: 0 0 30px;
+										height: 30px;
+										border-radius: 3px;
+										margin: 0 10px 0 0;
+										overflow: hidden;
+										text-align: center;
+										line-height: 30px;
+										background: #3373d5;
+										color: #fff;
+										display: inline-block;
+									}
+									.bg-rengongzhineng{
+										background: #ec4989; 
+									}
+									.bg-qianduan{
+										background: #3373d5; 
+									}
+									.bg-houduan{
+										background: #0a9e00; 
+									}
+									.bg-shujuku{
+										background: #2ea9df;
+									}
+									.bg-jiagou{
+										background: #6f1ff4;
+									}
+									h4{
+										overflow: hidden;
+										text-overflow: ellipsis;
+										white-space: nowrap;
+										flex: 1 1 auto;
+									}
+									span{
+										border: 1px solid #edeef0;
+										color: #8e9ca3;
+										padding: 2px;
+										border-radius: 2px;
+										position: relative;
+										z-index: 1;
+									}
+								}
+								&:hover{
+									background: #f4f8fb;
+									border-left: 5px solid #2a3e52;
+									h4{
+										color: #273d4b;	
+									}
+								}
+								.icon-dbo,.icon-jiagou,.icon-nodejs{
+									font-size: 30px;
+								}
+							}
+							.active{
+								border-left: 5px solid #2a3e52;
+							    color: #2a3e52;
+							    background: #f4f8fb;
+							}
 						}
 					}
-				}	
-
+				}
 			}
 		}	
 	}
@@ -478,6 +481,15 @@ html,body{
 							.news-box{
 								.flex();
 								margin: 5px;
+								.avatar{
+									flex: 0 0 30px;
+									height: 30px;
+									overflow: hidden;	
+									margin: 0 10px 0 0;
+									img{
+										max-width: 100%;
+									}	
+								}
 								.number{
 									flex: 0 0 30px;
 									height: 30px;
@@ -494,8 +506,11 @@ html,body{
 									flex: 1 1 auto;
 									.article-tit{
 										margin: 0 0 12px 0;
-										color: #2a3e52;
+										color: #00120E;
 										line-height: 20px;
+										font-family: "Microsoft YaHei";
+										font-size: 14px;
+										font-weight: 600;
 									}
 								}	
 								.article-tag{
@@ -517,24 +532,29 @@ html,body{
 								}
 								.article-detail{
 									overflow: hidden;
+									.flex();
+									align-items: center;
+									justify-content: flex-start;
 									span{
 										color: #717171;
-										font-size: 12px;	
-										float: left;
+										font-size: 12px;
 										display: block;
-										&:after{
-											content: '|';
-											margin: 0 5px;
-										}
+										margin: 0 10px 0 0;
 										&:last-child{
-											&:after{
-												content: '';
-											}
+											margin-right: 0;
 										}
+									}
+									.article-cat{
+										color: #1FAB89;
+										font-size: 14px;
+										font-family: "PingFang SC";
 									}
 								}
 								.article-comment-avatar{
 									overflow: hidden;
+									.flex();
+									align-items: center;
+									justify-content: flex-start;
 									em{
 										display: block;
 										width: 20px;
@@ -554,6 +574,18 @@ html,body{
 										height: 22px;
 										line-height: 22px;
 										margin: 0 0 0 5px;
+									}
+								}
+								.more-avatar{
+									&:after{
+										content: "\2022\2022\2022";
+										display: block;
+										letter-spacing: 1px;
+										color: #d8d8d8;
+										text-align: center;
+										font-size: 12px;
+										height: 20px;
+										line-height: 20px;
 									}
 								}
 							}
@@ -640,8 +672,15 @@ html,body{
 						align-items: center; 
 						.info{
 							margin: 0 20px 0 10px;
+							h4{
+								color: #00120E;
+								line-height: 18px;
+								font-size: 14px;
+								font-family: Helvetica;
+							}
 							span{
-								color: #87969d;
+								color: #74848B;
+								font-size: 12px;
 							}
 						}
 						.btn{
@@ -653,7 +692,7 @@ html,body{
 							text-align: center;
 							background: #ff9090;
 							display: inline-flex;
-							border-radius: 15px;
+							border-radius: 25px;
 						}
 					}
 				}

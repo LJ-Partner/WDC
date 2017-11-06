@@ -26,7 +26,7 @@
 				display: block;
 				width: 100%;
 				height: 34px;
-				padding: 0 34px;
+				padding: 0 34px 0 15px;
 				background-color: #fff;
 				color: #566574;
 				font-family: Varela,'Helvetica Neue',Helvetica,sans-serif;
@@ -34,25 +34,30 @@
 				font-style: normal;
 				font-size: 13px;
 				letter-spacing: .17px;
-				border: solid 1px #eceef1;
-				border-radius: 6px;	
+				border: solid 1px #E4E4E4;
+				border-radius: 100px;	
 				box-sizing: border-box;
 				&:focus{
-					border: 1px solid #3b99fc;
+					border: 1px solid #1FAB89;
 					outline: 0;
-					box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+					box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(33,181,145,0.6);
 				}
 			}	
 			.search-btn{
 				position: absolute;
-				width: 34px;
-				height: 34px;
-				top: 0;
+				width: 28px;
+				height: 28px;
+				top: 3px;
 				text-align: center;
-				line-height: 34px;
-				opacity: .4;
+				line-height: 28px;
 				cursor: pointer;
-				left: 0;
+				right: 3px;
+				color: #fff;
+				background: #1FAB89;
+				border-radius: 20px;
+				&:hover{
+					background: #006741;
+				}
 			}
 		}
 		.top-cat{
@@ -184,7 +189,7 @@
 					padding: 10px;
 					dl{
 						.flex();
-						justify-content: left;
+						justify-content: flex-start;
 						aligin-items: center;
 						margin: 0 0 10px 0;
 						dt{
@@ -246,7 +251,7 @@
 				.flex();
 				padding:0 5px;
 				align-items: center;	
-				justify-content: left;
+				justify-content: flex-start;
 				height: 28px;
 				img{
 					flex: 0 0 20px;

@@ -1,5 +1,5 @@
-require('../less/index.less');
-var COMMON = require('./common/common.js');
+require('../../less/article/index.less')
+var COMMON = require('../common/common.js');
 $(function(){
 	var INDEX = {
 		init : function(){
@@ -11,10 +11,10 @@ $(function(){
 				var arr = $(this).siblings('.j-e-cat-list-slide').css('display');
 				if(arr=='block'){
 					$(this).siblings('.j-e-cat-list-slide').slideUp();
-					$(this).find('.arrow').addClass('arrow-left').removeClass('arrow-up');
+					$(this).find('.arrow').addClass('arrow-left').removeClass('arrow-down');
 				}else{
 					$(this).siblings('.j-e-cat-list-slide').slideDown(); 
-					$(this).find('.arrow').removeClass('arrow-left').addClass('arrow-up');
+					$(this).find('.arrow').removeClass('arrow-left').addClass('arrow-down');
 				}
 			});
 			$('.j-e-select-click').each(function(){
@@ -65,3 +65,4 @@ $(function(){
 	COMMON.commentRelated();
 	COMMON.login();
 });
+
