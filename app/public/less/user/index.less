@@ -1,0 +1,314 @@
+@import '../common/common.less';
+
+.user-w{
+	background: #f2f2f2;
+	padding: 14px 0 0 0;
+	min-height: 1000px;
+	.user{
+		width: 1280px;
+		margin: 0 auto;
+		.user-header{
+			.flex();
+			justify-content: space-between;
+			padding: 30px 78px;
+			box-sizing: border-box;
+			color: #87969d;
+			font-size: 14px;
+			align-items: flex-end;
+			margin: 0 0 14px 0;
+			background: #fff;
+			.header-avatar{
+				.flex();
+				justify-content: flex-start;
+				align-items: flex-end;
+				.header-vatar-pic{
+					border-radius: 50%;
+					background: #e7e7e7;
+					margin: 0 20px 0 0;
+				}
+				.header-vatar-intro{
+					h3{
+						font-size: 16px;
+						margin: 0 0 14px 0;
+						em{
+							color: #273d4b;
+							font-size: 24px;
+							font-weight: 600;
+						}
+					}
+					ul{
+						li{
+							margin: 0 0 10px 0;
+							a{
+								color: #87969d;
+							}
+							&:last-child{
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+			.header-edit{
+				.btn-edit{
+					padding: 10px 26px;
+					border-radius: 5px;
+					border: 1px solid #1fab89;
+					font-size: 16px;
+					color: #1fab89;	
+					&:hover{
+						background: #1fab89;
+						color: #fff;
+					}
+				}
+			}
+		}
+		.user-main{
+			.flex();
+			align-items: flex-start;
+			.user-main-left{
+				flex: 0 0 286px;
+				margin: 0 12px 0 0;
+				.data{
+					.flex();
+					border-radius: 5px;
+					box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+					padding: 10px 0;
+					color: #a4afb7;
+					margin: 0 0 14px 0;
+					background: #fff;
+					.data-item{
+						flex: 1 1 auto;
+						text-align: center;
+						dt{
+							padding: 6px 0;
+						}
+						dd{
+							color: #304256;
+							font-size: 18px;
+							font-weight: 600;
+							padding: 6px 0;
+						}
+						&:first-child{
+							border-right: 1px solid #f2f2f2;
+						}
+					}
+				}
+				.status{
+					background: #fff;
+					box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+					line-height: 50px;
+					border-radius: 5px;
+					padding: 0 18px;
+					color: #304256;
+					font-size: 16px;
+					.status-cnt{
+						dl{
+							.flex();
+							justify-content: space-between;
+							dd{
+								color: #87969d;
+							}
+						}
+					}
+				}
+			}
+			.user-main-middle{
+				flex: 1 1 auto;
+				margin: 0 12px 0 0;
+				background: #fff;
+				box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				h2{
+					padding: 20px 18px;
+					color: #304256;
+					font-size: 18px;
+					border-bottom: 1px solid #f2f2f2;	
+				}
+				.dynamic{	
+					.dynamic-cnt{
+						padding: 0 18px;
+						.dynamic-item{
+							.flex();
+							padding: 20px 0;
+							border-bottom: 1px solid #f2f2f2;
+							justify-content: space-between;
+							color: #87969d;
+							font-size: 12px;
+							.dynamic-item-detail{
+								h3{
+									color: #2a3e52;
+									font-size: 14px;
+									line-height: 36px;
+								}
+								p{
+									color: #717171;
+								}
+								.author{
+									.flex();
+									margin: 16px 0 0 0;
+									align-items: center;
+									.avatar{
+										display: block;
+										margin: 0 10px 0 0;
+									}
+									.info{
+										h4{
+											font-size: 14px;
+											line-height: 25px;
+										}
+									}
+								}
+							}
+							&:last-child{
+								border-bottom: none;
+								padding-bottom: 70px;
+							}
+						}
+					}
+				}
+				.attention-list{
+					.attention-list-cnt{
+						padding: 0 18px;	
+						.attention-item{
+							.flex();
+							justify-content: space-between;
+							align-items: center;
+							padding: 20px 0;
+							border-bottom: 1px solid #f2f2f2;
+							.author{
+								.flex();
+								justify-content: flex-start;
+								align-items: center;
+								.avatar{
+									display: block;
+									margin: 0 10px 0 0;
+								}
+								.info{
+									h4{
+										font-size: 14px;
+										line-height: 25px;
+									}
+									span{
+										font-size: 12px;
+									}
+								}
+							}
+							.btn-attention{
+								padding: 4px 0;
+								background: #87969d;
+								color: #fff;
+								display: block;
+								width: 80px;
+								border-radius: 5px;
+								text-align: center;
+								&:before{
+									content: '已关注';
+								}
+								&:hover{
+									&:before{
+										content: '取消关注';
+									}									
+								}
+							}
+							&:last-child{
+								border-bottom: none;
+							}
+						}
+					}
+				}
+				.history{
+					.history-tit{
+						.flex();
+						justify-content: space-between;
+						a{
+							color: #87969d;
+							font-size: 12px;
+							border: 1px solid #e5e5e5;
+							border-radius: 5px;
+							padding: 3px 4px;
+						}
+					}
+					.history-cnt{
+						padding: 0 18px;
+						.history-item{
+							.flex();
+							justify-content: space-between;
+							align-items: center;
+							padding: 20px 0;
+							border-bottom: 1px solid #f2f2f2;	
+							.item-info{
+								h3{
+									color: #2a3e52;
+									font-size: 14px;
+									margin: 0 0 8px 0;
+								}
+								p{
+									font-size: 12px;
+									color: #717171;	
+									span{
+										padding: 0 6px 0 0;
+										border-right: 1px solid #717171;
+										margin: 0 5px 0 0;
+										&:last-child{
+											border-right: none;
+											margin-right: 0;
+										}
+									}
+								}
+							}
+							a{
+								color: #01a644;
+								font-size: 16px;
+							}
+							&:last-child{
+								borer-bottom: none;
+							}
+						}	
+					}		
+				}
+			}
+			.user-main-right{
+				flex: 0 0 286px;
+				color: #b7bfc3;
+				.pannel{
+					padding: 0 14px 36px 14px;
+					margin: 0 0 14px 0;
+					background: #fff;
+					box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+					border-radius: 5px;
+					.pannel-tit{
+						.flex();
+						justify-content: space-between;
+						color: 	#304256;
+						font-size: 15px;
+						padding: 14px 0;
+						a{
+							color: #87969d;
+							font-size: 14px;
+						}
+					}
+					.pannel-cnt{
+						.empty{
+							color: #b7bfc3;
+							background: #f6f6f6;
+							border-radius: 5px;
+							padding: 6px 0 12px 0;
+							line-height: 26px;
+							text-align: center;
+							a{
+								color: #01a644;
+							}
+						}
+					}
+				}
+				.visited{
+					margin: 30px 0 0 0;
+					p{
+						line-height: 24px;
+					}
+				}
+			}
+		}
+	}
+}

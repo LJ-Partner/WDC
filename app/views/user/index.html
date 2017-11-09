@@ -1,0 +1,308 @@
+{% extends '../layout/layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{loadmap.css}}">
+{% endblock%}
+
+{% block body %}
+	{% include "../global/head-top.html" ignore missing %}
+	<div class="user-w">
+		<div class="user">
+			<div class="user-header">
+				<div class="header-avatar">
+					<a href="javascript:;" class="header-vatar-pic">
+						<img src="/img/default-avatar.png">	
+					</a>
+					<div class="header-vatar-intro">
+						<h3><em>雷坤</em> 填写所在职位</h3>
+						<ul>
+							<li>
+								<i class="iconfont icon-weizhi"></i>
+								<a href="javascript:;">填写现居城市</a>
+							</li>
+							<li>
+								<i class="iconfont icon-biye"></i>
+								<a href="javascript:;">填写毕业院校</a>
+							</li>
+							<li>
+								<i class="iconfont icon-gongsi"></i>
+								<a href="javascript:;">填写所在公司／组织</a>
+							</li>
+							<li>
+								<i class="iconfont icon-lianjie"></i>
+								<a href="javascript:;">填写个人主网站</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
+				<div class="header-edit">
+					<a href="javascript:;" class="btn-edit">编辑个人资料</a>		
+				</div>
+			</div>
+			<div class="user-main">
+				<div class="user-main-left">
+					<div class="data">
+						<dl class="data-item">
+							<dt>关注了</dt>
+							<dd>66</dd>
+						</dl>
+						<dl class="data-item">
+							<dt>粉丝</dt>
+							<dd>88266</dd>
+						</dl>
+					</div>
+					<div class="status">
+						<h4>个人动态</h4>
+						<div class="status-cnt">
+							<dl>
+								<dt>我的文章</dt>
+								<dd>66</dd>
+							</dl>
+							<dl>
+								<dt>收藏的文章</dt>
+								<dd>88</dd>
+							</dl>
+							<dl>
+								<dt>我的分享</dt>
+								<dd>266</dd>
+							</dl>
+							<dl>
+								<dt>浏览历史</dt>
+								<dd>18986</dd>
+							</dl>
+						</div>
+					</div>		
+				</div>	
+				<div class="user-main-middle">
+					<!-- 个人动态 -->
+					<div class="dynamic hide">
+						<h2 class="dynamic-tit">个人动态</h2>
+						<ul class="dynamic-cnt">
+							<li class="dynamic-item">
+								<div class="dynamic-item-detail">
+									<span>赞了文章</span>
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p>99赞 | 66评论 | 19小时前  知乎</p>
+								</div>
+								<em class="dynamic-item-time">1小时前</em>		
+							</li>
+							<li class="dynamic-item">
+								<div class="dynamic-item-detail">
+									<span>赞了文章</span>
+									<div class="author">
+										<a href="javascript:;" class="avatar">
+											<img src="/img/avatar2.png">
+										</a>
+										<div class="info">
+											<h4>知乎</h4>
+											<span>暂无个性签名</span>
+										</div>
+									</div>
+								</div>
+								<em class="dynamic-item-time">1小时前</em>		
+							</li>
+							<li class="dynamic-item">
+								<div class="dynamic-item-detail">
+									<span>赞了文章</span>
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p>99赞 | 66评论 | 19小时前  知乎</p>
+								</div>
+								<em class="dynamic-item-time">1小时前</em>		
+							</li>
+							<li class="dynamic-item">
+								<div class="dynamic-item-detail">
+									<span>赞了文章</span>
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p>99赞 | 66评论 | 19小时前  知乎</p>
+								</div>
+								<em class="dynamic-item-time">1小时前</em>		
+							</li>	
+						</ul>
+					</div>
+					<!-- 关注的作者 -->
+					<div class="attention-list hide">
+						<h2 class="attention-list-tit">关注的作者</h2>
+						<ul class="attention-list-cnt">
+							<li class="attention-item">
+								<div class="author">
+									<a href="javascript:;" class="avatar">
+										<img src="/img/avatar2.png">
+									</a>
+									<div class="info">
+										<h4>知乎</h4>
+										<span>暂无个性签名</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-attention"></a>		
+							</li>
+							<li class="attention-item">
+								<div class="author">
+									<a href="javascript:;" class="avatar">
+										<img src="/img/avatar2.png">
+									</a>
+									<div class="info">
+										<h4>知乎</h4>
+										<span>暂无个性签名</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-attention"></a>		
+							</li>
+							<li class="attention-item">
+								<div class="author">
+									<a href="javascript:;" class="avatar">
+										<img src="/img/avatar2.png">
+									</a>
+									<div class="info">
+										<h4>知乎</h4>
+										<span>暂无个性签名</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-attention"></a>		
+							</li>
+							<li class="attention-item">
+								<div class="author">
+									<a href="javascript:;" class="avatar">
+										<img src="/img/avatar2.png">
+									</a>
+									<div class="info">
+										<h4>知乎</h4>
+										<span>暂无个性签名</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-attention"></a>		
+							</li>
+							<li class="attention-item">
+								<div class="author">
+									<a href="javascript:;" class="avatar">
+										<img src="/img/avatar2.png">
+									</a>
+									<div class="info">
+										<h4>知乎</h4>
+										<span>暂无个性签名</span>
+									</div>
+								</div>
+								<a href="javascript:;" class="btn-attention"></a>		
+							</li>
+						</ul>
+					</div>
+					<!-- 浏览历史 -->
+					<div class="history">
+						<h2 class="history-tit">
+							<span>浏览历史</span>
+							<a href="javascript:;">清空记录</a>	
+						</h2>
+						<ul class="history-cnt">
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+							<li class="history-item">
+								<div class="item-info">
+									<h3>透过 js-beautify@1.7.0 的 Bug 来看，npm 默认的 lock机制是否重要？</h3>
+									<p><span>99赞</span> <span>66评论</span> <span>19小时前</span> <span> 知乎</span></p>
+								</div>
+								<a href="javascript:;">删除</a>	
+							</li>
+						</ul>	
+					</div>
+				</div>
+				<div class="user-main-right">
+					<div class="pannel">
+						<div class="pannel-tit">
+							<h3>擅长技能</h3>
+							<a href="javascript:;">
+								<i class="iconfont icon-pencil"></i>
+								<span>编辑</span>
+							</a>
+						</div>
+						<div class="pannel-cnt">
+							<div class="empty">
+								<img src="/img/empty-pic.png">
+								<p>是时候表演真正的技术了...</p>
+								<a href="javascript:;">立即添加</a>
+							</div>	
+						</div>
+					</div>
+					<div class="pannel">
+						<div class="pannel-tit">
+							<h3>开源项目／著作</h3>
+							<a href="javascript:;">
+								<i class="iconfont icon-pencil"></i>
+								<span>编辑</span>
+							</a>
+						</div>
+						<div class="pannel-cnt">
+							<div class="empty">
+								<img src="/img/empty-pic.png">
+								<p>是时候表演真正的技术了...</p>
+								<a href="javascript:;">立即添加</a>
+							</div>	
+						</div>
+					</div>
+					<div class="visited">
+						<p>注册于2017-10-24</p>
+						<p>个人主页被浏览998次</p>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+{% endblock %}
+
+
+
+{% block js %}
+
+{% endblock %}

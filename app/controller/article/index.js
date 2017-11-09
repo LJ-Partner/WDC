@@ -1,5 +1,5 @@
 var Models = require('../../models/index');
-exports.lists = function (req, res, next) {
+exports.index = function (req, res, next) {
 	//console.log(req.loadmap);
 	res.render('article/index.html',
 		{
