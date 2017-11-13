@@ -1,0 +1,129 @@
+@import '../common/common.less';
+.user-edit-w{
+	background: #f2f2f2;
+	padding: 14px 0 0 0;
+	.user-edit{
+		width: 1280px;
+		margin: 0 auto;
+		background: #fff;
+		border-radius: 5px;
+		min-height: 1000px;
+		.flex();
+		padding: 30px 80px;
+		box-sizing: border-box;
+		justify-content: flex-start;
+		align-items: flex-start;
+		.edit-avatar{
+			border-radius: 50%;
+			background: #e7e7e7;	
+			position: relative;
+			z-index: 1;	
+			margin: 0 18px 0 0;
+		}
+		.edit-detail{
+			flex: 1 1 auto;
+			.edit-detail-tit{
+				.flex();
+				justify-content: space-between;
+				h2{
+					color: #273d4b;
+					font-size: 24px;
+					line-height: 66px;
+					font-weight: 600;
+				}
+				a{
+					font-size: 16px;
+					color: #87969d;
+					&:hover{
+						color: #2ea9df;
+					}
+				}
+			}
+			.edit-detail-cnt{
+				.edit-item{
+					.flex();
+					justify-content: flex-start;
+					padding: 28px 0;
+					border-bottom: 1px solid #f2f2f2;
+					.edit-item-text{
+						flex: 0 0 170px;
+					}
+					.edit-item-info{
+						flex: 1 1 auto;
+						a{
+							color: #2ea9df;
+						}
+						.item-info-update{
+							.inp{
+								border-radius: 5px;
+								border: 1px solid #e5e8ea;
+								padding: 8px 5px;
+								color: #273d4b;
+								font-size: 16px;
+							}
+							.inp-large{
+								width: 698px;
+							}
+							.inp-middle{
+								width: 458px;
+							}
+							.inp-small{
+								width: 278px;
+							}
+							.mb20{
+								margin-bottom: 20px;
+							}
+							.mr20{
+								margin-right: 20px;
+							}
+							.block{
+								display: block;
+							}
+							button{
+								border: none;
+								padding: 4px 16px;
+								border-radius: 5px;
+								cursor: pointer;
+								color: #87969d;
+								font-size: 16px;
+								background: #fff;
+								border: 1px solid #87969d;
+								margin: 0 20px 0 0;
+							}
+							.btn-save{
+								margin: 0 20px 0 0;
+								background: #2ea9df;
+								color: #fff;
+								border: 1px solid #2ea9df;
+							}
+							.textarea-box{
+								border: 1px solid #e5e8ea;
+								width: 694px;
+								resize: none;	
+								padding: 10px;
+								margin: 20px 0;
+								border-radius: 5px;
+								height: auto;
+								overflow: auto;
+								&:-moz-placeholder {
+									/* Mozilla Firefox 4 to 18 */
+									color: #99a6ab !important;
+								}
+								&::-moz-placeholder {
+
+									/* Mozilla Firefox 19+ */
+									color: #99a6ab !important;
+								}
+							}
+						}
+					}
+					&:last-child{
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}	
+}
+
+
