@@ -9,6 +9,9 @@ router.get('/',filter.loadmap,article.index);
 router.get('/search/',filter.loadmap,search.index);
 router.get('/search/detail/:id',filter.loadmap,search.detail);
 router.get('/user/',filter.loadmap,user.index);
+router.get('/user/following',filter.loadmap,user.following);
+router.get('/user/fans',filter.loadmap,user.fans);
+router.get('/user/history',filter.loadmap,user.history);
 router.get('/user/edit/:id',filter.loadmap,user.edit);
 
 // router.all('*', function(req, res, next) {

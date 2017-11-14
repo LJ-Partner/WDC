@@ -11,12 +11,16 @@
 			<div class="edit-avatar">
 				<a href="javascript:;" class="avatar-pic">
 					<img src="/img/default-avatar.png">	
+					<div class="avatar-pic-cover">
+						<i class="iconfont icon-xiangji"></i>
+						<p>修改我的头像</p>
+					</div>
 				</a>	
 			</div>
 			<div class="edit-detail">
 				<div class="edit-detail-tit">
 					<h2>雷神</h2>
-					<a href="javascript:;">返回个人主页 ></a>
+					<a href="/user">返回个人主页 ></a>
 				</div>
 				<div class="edit-detail-cnt">
 					<form>
@@ -26,10 +30,27 @@
 									性别
 								</span>
 								<div class="edit-item-info">
+									<span>男</span>
 									<a href="javascript:;" class="item-info-edit">
 										<i class="iconfont icon-pencil"></i>
 										<em>修改</em>
 									</a>
+									<div class="item-info-update hide">
+										<div class="radio-w ">
+											<div class="cell-radio">
+												<input type="radio" name="sex" value="1" checked />
+												<span>男</span>	
+											</div>
+											<div class="cell-radio">
+												<input type="radio" name="sex" value="0" />
+												<span>女</span>	
+											</div>
+										</div>
+										<div class="update-btn-w">
+											<button type="button" class="btn-save">保存</button>
+											<button type="button">取消</button>
+										</div>
+									</div>
 								</div>						
 							</li>
 							<li class="edit-item">
@@ -37,11 +58,11 @@
 									一句话介绍自己
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
+									<a href="javascript:;" class="item-info-edit">
 										<i class="iconfont icon-pencil"></i>
 										<em>填写</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-large mb20" />
 										<div class="update-btn-w">
 											<button type="button" class="btn-save">保存</button>
@@ -55,11 +76,11 @@
 									居住地
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
-										<i class="iconfont icon-pencil"></i>
+									<a href="javascript:;" class="item-info-edit">
+										<i class="iconfont icon-tianjia"></i>
 										<em>添加居住地</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-small mr20" />
 										<button type="button" class="btn-save">保存</button>
 										<button type="button">取消</button>
@@ -71,11 +92,11 @@
 									所在行业
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
+									<a href="javascript:;" class="item-info-edit">
 										<i class="iconfont icon-pencil"></i>
 										<em>填写</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-small mr20" />
 										<button type="button" class="btn-save">保存</button>
 										<button type="button">取消</button>
@@ -87,11 +108,11 @@
 									职业经历
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
-										<i class="iconfont icon-pencil"></i>
+									<a href="javascript:;" class="item-info-edit">
+										<i class="iconfont icon-tianjia"></i>
 										<em>添加职业经历</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" placeholder="公司或组织名称" class="inp mr20" />
 										<input type="text" placeholder="你的职位(选填)" class="inp mr20" />
 										<button type="button" class="btn-save">保存</button>
@@ -104,11 +125,11 @@
 									教育经历
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
-										<i class="iconfont icon-pencil"></i>
+									<a href="javascript:;" class="item-info-edit">
+										<i class="iconfont icon-tianjia"></i>
 										<em>添加教育经历</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" placeholder="学校或教育机构名称" class="inp mr20" />
 										<input type="text" placeholder="专业方向(选填)" class="inp mr20" />
 										<button type="button" class="btn-save">保存</button>
@@ -121,11 +142,11 @@
 									擅长技能
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
+									<a href="javascript:;" class="item-info-edit">
 										<i class="iconfont icon-pencil"></i>
 										<em>填写</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-middle mr20" />
 										<button type="button" class="btn-save">保存</button>
 										<button type="button">取消</button>
@@ -137,11 +158,11 @@
 									项目或著作介绍
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
-										<i class="iconfont icon-pencil"></i>
+									<a href="javascript:;" class="item-info-edit">
+										<i class="iconfont icon-tianjia"></i>
 										<em>添加项目或著作介绍</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-small block" />
 										<textarea class="block textarea-box" placeholder="开源项目或著作介绍"></textarea>
 										<button type="button" class="btn-save">保存</button>
@@ -154,11 +175,11 @@
 									个人网站链接
 								</span>
 								<div class="edit-item-info">
-									<a href="javascript:;" class="item-info-edit hide">
-										<i class="iconfont icon-pencil"></i>
+									<a href="javascript:;" class="item-info-edit">
+										<i class="iconfont icon-tianjia"></i>
 										<em>添加个人网站链接</em>
 									</a>
-									<div class="item-info-update">
+									<div class="item-info-update hide">
 										<input type="text" class="inp inp-small mr20" />
 										<button type="button" class="btn-save">保存</button>
 										<button type="button">取消</button>
