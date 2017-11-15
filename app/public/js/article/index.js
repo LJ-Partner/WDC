@@ -1,4 +1,4 @@
-require('../../less/article/index.less')
+require ('../../less/article/index.less')
 var COMMON = require('../common/common.js');
 $(function(){
 	var INDEX = {

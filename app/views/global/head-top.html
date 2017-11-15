@@ -3,9 +3,9 @@
 	<div class="top-middle">
 		<div class="search-box">
 			<input class="search-bar j-e-search" placeholder="请输入搜索内容">
-			<div class="search-btn">
+			<a href="/search" class="search-btn">
 				<i class="iconfont icon-sousuo"></i>
-			</div>
+			</a>
 		</div>
 		<div class="top-cat">
 			<a href="javascript:;" class="cur">文章</a>
@@ -64,15 +64,12 @@
 				</div>
 			</div>
 		</li>
-		<li>
-			<div class="login-w">
-				<button class="login j-e-login">登录</button>
-				<button class="sign-up j-e-register">加入蜂人院</button>	
-			</div>
-			
+		<li class="login-w" style="display: none;">
+			<button class="login j-e-login">登录</button>
+			<button class="sign-up j-e-register">加入蜂人院</button>	
 		</li>
 	</ul>
-	<div class="user" style="display:none;">
+	<div class="user">
 		<div class="select-container">
 			<div class="active-option">
 				<img src="/img/avatar2.png">
@@ -81,7 +78,7 @@
 			</div>
 			<ul class="select-options">
 				<li>
-					<a href="javascript:;">
+					<a href="/user">
 						<i class="iconfont icon-gerenzhongxin"></i>
 						<span>个人中心</span>	
 					</a>
