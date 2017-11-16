@@ -16,74 +16,48 @@ module.exports = {
 		});
 	},
 	commentRelated : function () {
-		$('.js-e-commentfocus').on('focus',function(){
-			var arr = $(this).siblings('.js-e-comment-slide').css('display');
+		$('.j-e-commentfocus').on('focus',function(){
+			var arr = $(this).siblings('.j-e-comment-slide').css('display');
 			if(arr == 'block' ){
-				$(this).siblings('.js-e-comment-slide').slideUp();	
+				$(this).siblings('.j-e-comment-slide').slideUp();	
 			}else{
-				$(this).siblings('.js-e-comment-slide').slideDown();	
+				$(this).siblings('.j-e-comment-slide').slideDown();	
 			}
 		});
 
-		$('.js-e-commentcancel').on('click',function(){
-			$(this).parents('.js-e-comment-slide').slideUp().siblings().parents('.js-e-comment-slide').slideDown();
-			$(this).parents('.js-e-comment-slide').siblings('.js-e-commentfocus').val('');
+		$('.j-e-commentcancel').on('click',function(){
+			var type = $(this).attr('data-type');
+			$(this).parents('.j-e-comment-slide').slideUp().siblings().parents('.j-e-comment-slide').slideDown();
+			$(this).parents('.j-e-comment-slide').siblings('.j-e-commentfocus').val('');
 		});
 
 		$('.j-e-commentadd').on('click',function(){
 			$(this).parents('.more-comment').siblings('.new-comment-w').toggle();
-			$(this).parents('.more-comment').siblings('.new-comment-w').find('.js-e-commentfocus').val('');
+			$(this).parents('.more-comment').siblings('.new-comment-w').find('.j-e-commentfocus').val('');
 		});
 		//回复
-		// $('.j-e-repeat').unbind().on('click',function(){
-		// 	var type = $(this).attr('data-type');//1 一级回复， 2 2级回复
-		// 	var show;
-		// 	var text;
-		// 	var flag = false;
-		// 	if(type == '1'){
-		// 		flag = false;
-		// 		if(!flag && flag1){
-		// 			$(this).parents('.comment-box').siblings('.sub-comment-list').find('.new-comment-w').toggle();
-		// 		}
-		// 		$(this).parents('.comment-box').siblings('.sub-comment-list').find('.js-e-commentfocus').val(text);
-		// 	}else if(type == '2'){
-		// 		text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
-		// 		if(flag1){
-		// 			$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideDown();
-		// 			flag1 = false;	
-		// 		}else{
-		// 			$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideUp();
-		// 			flag1 = true;
-		// 		}
-		// 		$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
-		// 		flag = true;
-		// 	}
-		// });
+			//一级回复
+		$('.j-e-comment').each(function(i){
+			var len = $('.j-e-sub-comment').length;
+			
+			$(this).find('.j-e-repeat').unbind().on('click',function(){
+				$('.comment-w').eq(i).find('.comment-box .new-comment-w').toggle();
+				$(this).parents('.comment-w').siblings().find('.comment-box .new-comment-w').hide();
+			});
 
-		var flag = false;
-		$('.j-e-sub-repeat').each(function(i){
-			$(this).on('click',function(){
+			$(this).find('.j-e-unfolded').unbind().on('click',function(){
+				if(len > 1){
+					$('.j-e-sub-comment:gt(1)').hide();
+				}
+			});
+		});
+			//多级回复
+		$('.j-e-sub-comment').each(function(i){
+			$(this).find('.j-e-sub-repeat').unbind().on('click',function(){
 				var text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
-				var display = $(this).parents('.sub-comment-box').siblings('.new-comment-w').css('display');
-				var text = $(this).parents('.sub-tool-group').siblings('p').find('a').text();
-				if(!flag){
-					if(display == 'block'){
-						$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideUp();
-						flag = false;
-						console.log(1111);
-					}else{
-						$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideDown();	
-						flag = true;
-						console.log(222);
-					}
-				}else{
-					if(display == 'block'){
-						$(this).parents('.sub-comment-box').siblings('.new-comment-w').slideDown();
-						flag = false;
-						console.log(333);
-					}
-				}					
-				$(this).parents('.sub-comment-box').siblings('.new-comment-w').find('.js-e-commentfocus').val(text);
+				$('.sub-comment-box').eq(i).find('.j-e-commentfocus').val(text);
+				$('.sub-comment-box').eq(i).find('.new-comment-w').toggle();
+				$(this).parents('.sub-comment-box').siblings().find('.new-comment-w').hide();	
 			});
 		});
 	},

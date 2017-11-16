@@ -85,14 +85,14 @@
 			<form class="new-comment">
 				<a class="avatar"><img src="/img/avatar2.png"></a>
 				<div class="write-msg">
-					<textarea class="js-e-commentfocus" placeholder="写下你的评论..."></textarea>	
-					<div class="send-detail-w js-e-comment-slide">
+					<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+					<div class="send-detail-w j-e-comment-slide">
 						<div class="send-detail">
 							<a class="emoji" href="javascript:;">
 								<i class="iconfont icon-biaoqing"></i>
 							</a>
 							<div class="btn-w">
-								<a class="btn cancel js-e-commentcancel">取消</a>
+								<a class="btn cancel j-e-commentcancel" data-type = "1">取消</a>
 								<a class="btn btn-send">发表</a>	
 							</div>
 						</div>	
@@ -100,7 +100,7 @@
 				</div>
 			</form>
 			<div class="comment-list">
-				<div class="comment-w">
+				<div class="comment-w j-e-comment">
 					<div class="comment-box">
 						<div class="author">
 							<a href="javascript:;" class="avatar">
@@ -124,9 +124,27 @@
 								</a>
 							</div>
 						</div>
+						<div class="new-comment-w">
+							<form class="new-comment">
+								<div class="write-msg">
+									<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+									<div class="send-detail-w j-e-comment-slide">
+										<div class="send-detail">
+											<a class="emoji" href="javascript:;">
+												<i class="iconfont icon-biaoqing"></i>
+											</a>
+											<div class="btn-w">
+												<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
+												<a class="btn btn-send">发表</a>	
+											</div>
+										</div>	
+									</div>
+								</div>
+							</form>	
+						</div>
 					</div>
 					<div class="sub-comment-list">
-						<div class="sub-comment-box">
+						<div class="sub-comment-box j-e-sub-comment">
 							<p>
 								<a href="javascript:;">地虎：</a>
 								<span>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</span>
@@ -141,8 +159,26 @@
 									<span>回复</span>
 								</a>
 							</div>	
+							<div class="new-comment-w">
+								<form class="new-comment">
+									<div class="write-msg">
+										<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+										<div class="send-detail-w j-e-comment-slide">
+											<div class="send-detail">
+												<a class="emoji" href="javascript:;">
+													<i class="iconfont icon-biaoqing"></i>
+												</a>
+												<div class="btn-w">
+													<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
+													<a class="btn btn-send">发表</a>	
+												</div>
+											</div>	
+										</div>
+									</div>
+								</form>	
+							</div>
 						</div>
-						<div class="sub-comment-box">
+						<div class="sub-comment-box j-e-sub-comment">
 							<p>
 								<a href="javascript:;">我问问地虎：</a>
 								<span>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</span>
@@ -157,27 +193,71 @@
 									<span>回复</span>
 								</a>
 							</div>	
+							<div class="new-comment-w">
+								<form class="new-comment">
+									<div class="write-msg">
+										<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+										<div class="send-detail-w j-e-comment-slide">
+											<div class="send-detail">
+												<a class="emoji" href="javascript:;">
+													<i class="iconfont icon-biaoqing"></i>
+												</a>
+												<div class="btn-w">
+													<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
+													<a class="btn btn-send">发表</a>	
+												</div>
+											</div>	
+										</div>
+									</div>
+								</form>	
+							</div>
 						</div>
 						<div class="more-comment">
-							<a class="add-comment-btn j-e-commentadd">
+							<!-- <a class="add-comment-btn j-e-commentadd">
 								<i class="iconfont icon-pencil"></i>
 								<span>添加新评论</span>
-							</a>
+							</a> -->
 							<span class="line-wrap">
 								还有<em class="moreover-num">5</em>条评论，<a href="javascript:;" class="expand-view j-e-unfolded ">展开查看</a>
 							</span>
 						</div>
+					</div>	
+				</div>
+				<div class="comment-w j-e-comment">
+					<div class="comment-box">
+						<div class="author">
+							<a href="javascript:;" class="avatar">
+								<img src="/img/avatar2.png">
+							</a>
+							<div class="info">
+								<a href="javascript:;">雷神</a>
+								<span>1楼 1小时前</span>
+							</div>
+						</div>
+						<div class="comment-wrap">
+							<p>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</p>
+							<div class="tool-group">
+								<a>
+									<i class="iconfont icon-dianzanhou"></i>
+									<span>71人赞</span>
+								</a>
+								<a class="j-e-repeat" data-type="1" href="javascript:;">
+									<i class="iconfont icon-huifu"></i>
+									<span>回复</span>
+								</a>
+							</div>
+						</div>
 						<div class="new-comment-w">
 							<form class="new-comment">
 								<div class="write-msg">
-									<textarea class="js-e-commentfocus" placeholder="写下你的评论..."></textarea>	
-									<div class="send-detail-w js-e-comment-slide">
+									<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+									<div class="send-detail-w j-e-comment-slide">
 										<div class="send-detail">
 											<a class="emoji" href="javascript:;">
 												<i class="iconfont icon-biaoqing"></i>
 											</a>
 											<div class="btn-w">
-												<a class="btn cancel js-e-commentcancel">取消</a>
+												<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
 												<a class="btn btn-send">发表</a>	
 											</div>
 										</div>	
@@ -185,9 +265,87 @@
 								</div>
 							</form>	
 						</div>
+					</div>
+					<div class="sub-comment-list">
+						<div class="sub-comment-box j-e-sub-comment">
+							<p>
+								<a href="javascript:;">地虎：</a>
+								<span>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</span>
+							</p>
+							<div class="sub-tool-group">
+								<a>
+									<i class="iconfont icon-dianzanhou"></i>
+									<span>71人赞</span>
+								</a>
+								<a class="j-e-sub-repeat" data-type="2" href="javascript:;">
+									<i class="iconfont icon-huifu"></i>
+									<span>回复</span>
+								</a>
+							</div>	
+							<div class="new-comment-w">
+								<form class="new-comment">
+									<div class="write-msg">
+										<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+										<div class="send-detail-w j-e-comment-slide">
+											<div class="send-detail">
+												<a class="emoji" href="javascript:;">
+													<i class="iconfont icon-biaoqing"></i>
+												</a>
+												<div class="btn-w">
+													<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
+													<a class="btn btn-send">发表</a>	
+												</div>
+											</div>	
+										</div>
+									</div>
+								</form>	
+							</div>
+						</div>
+						<div class="sub-comment-box j-e-sub-comment">
+							<p>
+								<a href="javascript:;">我问问地虎：</a>
+								<span>可以体验下搜索框右侧的相机按扣，弹出拍照界面里点下自动排，然后会有一个端上的主体定位等着你</span>
+							</p>
+							<div class="sub-tool-group">
+								<a>
+									<i class="iconfont icon-dianzanhou"></i>
+									<span>71人赞</span>
+								</a>
+								<a class="j-e-sub-repeat" data-type="2" href="javascript:;">
+									<i class="iconfont icon-huifu"></i>
+									<span>回复</span>
+								</a>
+							</div>	
+							<div class="new-comment-w">
+								<form class="new-comment">
+									<div class="write-msg">
+										<textarea class="j-e-commentfocus" placeholder="写下你的评论..."></textarea>	
+										<div class="send-detail-w j-e-comment-slide">
+											<div class="send-detail">
+												<a class="emoji" href="javascript:;">
+													<i class="iconfont icon-biaoqing"></i>
+												</a>
+												<div class="btn-w">
+													<a class="btn cancel j-e-commentcancel" data-type = "2">取消</a>
+													<a class="btn btn-send">发表</a>	
+												</div>
+											</div>	
+										</div>
+									</div>
+								</form>	
+							</div>
+						</div>
+						<div class="more-comment">
+							<!-- <a class="add-comment-btn j-e-commentadd">
+								<i class="iconfont icon-pencil"></i>
+								<span>添加新评论</span>
+							</a> -->
+							<span class="line-wrap">
+								还有<em class="moreover-num">5</em>条评论，<a href="javascript:;" class="expand-view j-e-unfolded ">展开查看</a>
+							</span>
+						</div>
 					</div>	
 				</div>
-				
 			</div>
 		</div>
 	</div>
