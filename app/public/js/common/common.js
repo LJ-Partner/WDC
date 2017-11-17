@@ -38,17 +38,31 @@ module.exports = {
 		//回复
 			//一级回复
 		$('.j-e-comment').each(function(i){
-			var len = $('.j-e-sub-comment').length;
-			
+			var len = $('.comment-w').eq(i).find('.j-e-sub-comment').length; 
+			var flag = true;
+			$('.sub-comment-list').eq(i).find('.j-e-sub-comment').slice(3).hide();
+			if(len > 2){
+				$('.comment-w').eq(i).find('.j-e-more-comment').show();	
+				$('.sub-comment-list').eq(i).find('.moreover-num').text(parseInt(len - 3));
+				$(this).find('.j-e-unfolded').unbind().on('click',function(){
+					if(flag){
+						$('.sub-comment-list').eq(i).find('.j-e-sub-comment').slice(3).show();
+						$('.sub-comment-list').eq(i).find('.line-wrap span').hide();
+						$(this).text('收起');
+						flag = false;
+					}else{
+						$('.sub-comment-list').eq(i).find('.j-e-sub-comment').slice(3).hide();
+						$('.sub-comment-list').eq(i).find('.line-wrap span').show();
+						$(this).text('展开查看');
+						flag = true;
+					}
+				});
+			}else{
+				$('.comment-w').eq(i).find('.j-e-more-comment').hide();		
+			}
 			$(this).find('.j-e-repeat').unbind().on('click',function(){
 				$('.comment-w').eq(i).find('.comment-box .new-comment-w').toggle();
 				$(this).parents('.comment-w').siblings().find('.comment-box .new-comment-w').hide();
-			});
-
-			$(this).find('.j-e-unfolded').unbind().on('click',function(){
-				if(len > 1){
-					$('.j-e-sub-comment:gt(1)').hide();
-				}
 			});
 		});
 			//多级回复
