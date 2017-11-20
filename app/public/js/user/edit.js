@@ -14,6 +14,10 @@ $(function(){
 				$(this).addClass('hide');
 				$(this).siblings('.item-info-update').removeClass('hide');
 			});	
+			$('.edit-item-w').on('click','.j-e-btn-save',function(){
+				$(this).parents('.item-info-update').addClass('hide');
+				$(this).parents('.item-info-update').siblings('.j-e-info-edit').removeClass('hide');
+			});
 		}
 	}
 	EDIT.init();

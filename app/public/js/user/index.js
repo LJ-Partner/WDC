@@ -13,7 +13,7 @@ $(function(){
 			$('.intro-item-w').on('click','.j-e-btn-save',function(){
 				$(this).parent('.item-intro-update').addClass('hide');
 				$(this).parent('.item-intro-update').siblings('.j-e-intro-edit').removeClass('hide');
-			})	
+			});	
 		}
 	}
 	INDEX.init();
