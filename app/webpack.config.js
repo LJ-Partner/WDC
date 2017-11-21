@@ -20,7 +20,9 @@ module.exports = {
         search: './public/js/search/index.js',
         searchDetail: './public/js/search/detail.js',
         userIndex: './public/js/user/index.js',
-        userEdit: './public/js/user/edit.js'
+        userEdit: './public/js/user/edit.js',
+        writeIndex: './public/js/write/index.js',
+        writeHow: './public/js/write/howtowrite.js'
     },
     output: {
         path: path.join(__dirname, './public/dist/'),

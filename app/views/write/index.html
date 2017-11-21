@@ -1,0 +1,32 @@
+{% extends '../layout/layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{loadmap.css}}">
+{% endblock%}
+
+{% block body %}
+	{% include "../global/head-top.html" ignore missing %}
+	<div class="edit-w">
+		<div class="edit">
+			<form id="article">
+		        <div class="input-group">
+			        <div class="input-group-btn">
+			            <button type="button" class="btn"><span>原创</span> <span class="caret"></span></button>
+						<ul class="dropdown-menu hide">
+							<li><a href="javascript:;">原创</a></li>
+							<li><a href="javascript:;">转载</a></li>
+							<li><a href="javascript:;">翻译</a></li>
+						</ul>
+				    </div>
+				    <input id="myTitle" type="text" autocomplete="off" class="form-control" placeholder="标题：那是我夕阳下的奔跑" value="">
+			    </div>
+		    </form>
+        </div>
+	</div>	
+{% endblock %}
+
+
+
+{% block js %}
+<script type="text/javascript" src="{{loadmap.js}}"></script>
+{% endblock %}
