@@ -5,411 +5,435 @@
 {% endblock%}
 
 {% block body %}
-	{% include "../global/head-top.html" ignore missing %}
 	<div class="edit-w">
-		<div class="edit">
-			<form id="article">
-		        <div class="input-group">
-			        <div class="input-group-btn j-e-btn-select">
-			            <button type="button" class="btn"><span>原创</span> <span class="caret"></span></button>
-						<ul class="dropdown-menu j-e-option-list">
-							<li><a href="javascript:;">原创</a></li>
-							<li><a href="javascript:;">转载</a></li>
-							<li><a href="javascript:;">翻译</a></li>
-						</ul>
+		{% include "../global/head-top.html" ignore missing %}
+		<div class="edit-main">
+			<div class="edit">
+				<form id="article">
+			        <div class="input-group">
+				        <div class="input-group-btn j-e-btn-select">
+				            <button type="button" class="btn">
+				            	<em>原创</em>
+				            	<span class="caret"></span>
+				            </button>
+							<ul class="dropdown-menu j-e-option-list">
+								<li><a href="javascript:;">原创</a></li>
+								<li><a href="javascript:;">转载</a></li>
+								<li><a href="javascript:;">翻译</a></li>
+							</ul>
+					    </div>
+					    <input id="myTitle" type="text" autocomplete="off" class="form-control" placeholder="标题：那是我夕阳下的奔跑" value="">
 				    </div>
-				    <input id="myTitle" type="text" autocomplete="off" class="form-control" placeholder="标题：那是我夕阳下的奔跑" value="">
-			    </div>
-			    <div class="input-item">
-			    	<div class="item-select">
-			    		<select>
-			    			<option value="0" selected> 发布专栏(选填)</option>
-			    			<option value=""> + 申请专栏</option>
-			    		</select>
-			    	</div>
-			    	<div class="item-select">
-						<select>
-							<option selected="" value="-1">同步头条（选填）</option>
-							<option value="1490000006201494">前端</option>
-							<option value="1490000006201495">后端</option>
-							<option value="1490000006201496">iOS</option>
-							<option value="1490000006201502">Android</option>
-							<option value="1490000006201507">安全</option>
-							<option value="1490000010688683">人工智能</option>
-							<option value="1490000006201510">工具</option>
-							<option value="1490000006201514">程序员</option>
-							<option value="1490000006218048">行业</option>
-						</select>
-			    	</div>
-			    	<div class="item-tags">
-			    		<div class="tags-info">
-			    			<!-- <span class="info-item">
-			    				javascript
-			    				<em>×</em>
-			    			</span> -->
-			    			<input type="text" name="" placeholder="标签，如：php 可使用逗号,分号;分隔" />		
-			    		</div>
-			    		<div class="tab-box hide">
-			    			<ul class="tab-tit">
-			    				<li class="active">
-	    							<a href="javascript:;">开发语言</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">平台框架</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">服务器</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">数据库和缓存</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">开发工具</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">系统设备</a>	
-	    						</li>
-	    						<li>
-	    							<a href="javascript:;">其他</a>	
-	    						</li>	
-			    			</ul>
-			    			<div class="tab-cnt">
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">javascript</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">php</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">html</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">css</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">java</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">python</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">html5</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">node.js</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">c++</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">c</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">objective-c</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">golang</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">shell</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">swift</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">c#</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">ruby</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">bash</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">typescript</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">sass</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">asp.net</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">less</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">lua</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">scala</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">coffeescript</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">actionscript</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">erlang</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">perl</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">rust</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">laravel</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">spring</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">django</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">flask</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">express</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">ruby-on-rail</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">yii</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">tomado</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">koa</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">struts</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">linux</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">nginx</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">apache</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">docker</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">ubuntu</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">centos</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">缓存</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">tomcat</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">负载均衡</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">unix</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">hadoop</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">windows-server</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">mysql</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">sql</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">redis</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">mongodb</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">oracle</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">nosql</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">memcached</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">sqlserver</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">sqlite</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">postgresql</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">git</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">github</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">vim</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">xcode</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">sublime-text</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">eclipse</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">visual-studio-code</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">intellij-idea</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">maven</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">svn</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">ide</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">atom</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">visual-studio</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">emacs</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">hg</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">textmate</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">android</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">ios</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">chrome</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">windows</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">iphone</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">firefox</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">internet-explorer</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">safari</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">ipad</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">opea</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">apple-watch</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    				<div class="tab-item hide">
-			    					<ul class="item-list">
-			    						<li>
-			    							<a href="javascript:;">html5</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">react.js</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">搜索引擎</a>
-			    						</li>	
-			    						<li>
-			    							<a href="javascript:;">virtualenv</a>
-			    						</li>
-			    						<li>
-			    							<a href="javascript:;">lucene</a>
-			    						</li>
-			    					</ul>
-			    				</div>
-			    			</div>	
-			    		</div>
-			    	</div>
-			    </div>
-			    <div id="article-edit" class="editor-box">
-                    <textarea id="myEditor" class="hide"></textarea>
-                </div>
-                <div class="footer">
-	                <div class="container">
-	                    <div class="operations">
-							<div class="pull-left">
-								<label for="license">
-									<input type="checkbox" id="license"> 
-										注明版权
-									<i> i </i>
-								</label>
+				    <div class="input-item">
+				    	<div class="item-select">
+				    		<select>
+				    			<option value="0" selected> 发布专栏(选填)</option>
+				    			<option value=""> + 申请专栏</option>
+				    		</select>
+				    	</div>
+				    	<div class="item-select">
+							<select>
+								<option selected="" value="-1">同步头条（选填）</option>
+								<option value="1490000006201494">前端</option>
+								<option value="1490000006201495">后端</option>
+								<option value="1490000006201496">iOS</option>
+								<option value="1490000006201502">Android</option>
+								<option value="1490000006201507">安全</option>
+								<option value="1490000010688683">人工智能</option>
+								<option value="1490000006201510">工具</option>
+								<option value="1490000006201514">程序员</option>
+								<option value="1490000006218048">行业</option>
+							</select>
+				    	</div>
+				    	<div class="item-tags">
+				    		<div class="tags-info">
+				    			<!-- <span class="info-item">
+				    				javascript
+				    				<em>×</em>
+				    			</span> -->
+				    			<input type="text" name="" class="j-e-tag-focus" placeholder="标签，如：php 可使用逗号,分号;分隔" />		
+				    		</div>
+				    		<div class="tab-box hide j-e-tag-focus-cnt">
+				    			<ul class="tab-tit j-e-tag-tab">
+				    				<li class="active">
+		    							<a href="javascript:;">开发语言</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">平台框架</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">服务器</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">数据库和缓存</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">开发工具</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">系统设备</a>	
+		    						</li>
+		    						<li>
+		    							<a href="javascript:;">其他</a>	
+		    						</li>	
+				    			</ul>
+				    			<div class="tab-cnt j-e-tag-tab-cnt">
+				    				<div class="tab-item">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">javascript</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">php</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">html</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">css</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">java</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">python</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">html5</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">node.js</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">c++</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">c</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">objective-c</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">golang</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">shell</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">swift</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">c#</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">ruby</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">bash</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">typescript</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">sass</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">asp.net</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">less</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">lua</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">scala</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">coffeescript</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">actionscript</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">erlang</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">perl</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">rust</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">laravel</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">spring</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">django</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">flask</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">express</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">ruby-on-rail</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">yii</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">tomado</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">koa</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">struts</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">linux</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">nginx</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">apache</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">docker</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">ubuntu</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">centos</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">缓存</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">tomcat</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">负载均衡</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">unix</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">hadoop</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">windows-server</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">mysql</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">sql</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">redis</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">mongodb</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">oracle</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">nosql</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">memcached</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">sqlserver</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">sqlite</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">postgresql</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">git</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">github</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">vim</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">xcode</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">sublime-text</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">eclipse</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">visual-studio-code</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">intellij-idea</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">maven</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">svn</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">ide</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">atom</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">visual-studio</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">emacs</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">hg</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">textmate</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">android</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">ios</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">chrome</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">windows</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">iphone</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">firefox</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">internet-explorer</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">safari</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">ipad</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">opea</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">apple-watch</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    				<div class="tab-item hide">
+				    					<ul class="item-list">
+				    						<li>
+				    							<a href="javascript:;">html5</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">react.js</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">搜索引擎</a>
+				    						</li>	
+				    						<li>
+				    							<a href="javascript:;">virtualenv</a>
+				    						</li>
+				    						<li>
+				    							<a href="javascript:;">lucene</a>
+				    						</li>
+				    					</ul>
+				    				</div>
+				    			</div>	
+				    		</div>
+				    	</div>
+				    </div>
+				    <div id="article-edit" class="editor-box">
+	                    <!-- <textarea id="myEditor" class="hide"></textarea> -->
+	                    <script id="editor" class="editor" type="text/plain" style="width:100%;height:300px;"></script>
+	                </div>
+	                <div class="footer">
+		                <div class="container">
+		                    <div class="operations">
+								<div class="pull-left">
+									<label for="license">
+										<input type="checkbox" id="license"> 
+											注明版权
+										<i> i </i>
+									</label>
+								</div>
+								<div class="pull-right">
+									<span class="text-muted" id="editorStatus">已保存</span>
+									<a id="dropIt" href="javascript:;">[舍弃]</a>
+									<button class="btn">发布文章</button>
+								</div>
 							</div>
-							<div class="pull-right">
-								<span class="text-muted" id="editorStatus">已保存</span>
-								<a id="dropIt" href="javascript:;">[舍弃]</a>
-								<button class="btn">发布文章</button>
-							</div>
-						</div>
-					</div>	
-				</div>
-		    </form>
-        </div>
-	</div>	
+						</div>	
+					</div>
+			    </form>
+	        </div>
+		</div>		
+	</div>
+	<div class="pop-w" style="display: none">
+		<div class="pop">
+			<div class="pop-tit">
+				<h4>转载建议</h4>
+				<span class="close iconfont icon-guanbi2 j-e-close"></span>
+			</div>
+			<div class="pop-cnt">
+				<p>为了保证文章内容的持续更新，我们不建议大面积转载别人的内容到自己的专栏里；我们推荐使用头条发布该文章的链接，来保证原作者与读者的有效沟通。</p>	
+			</div>
+			<div class="pop-footer">
+				<button type="button" class="btn j-e-close">继续转载</button>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 
 
 {% block js %}
+<script type="text/javascript" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+
 <script type="text/javascript" src="{{loadmap.js}}"></script>
 {% endblock %}
