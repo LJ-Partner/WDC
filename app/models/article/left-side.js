@@ -4,7 +4,37 @@ module.exports = [
 		icon: 'rengongzhineng',
 		data: [
 			{	
-				icon: 'react',
+				icon: 'shenduxuexi',
+				name: '深度学习',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			},
+			{	
+				icon: 'ziranyuyanchuli',
+				name: '自然语言处理',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			},
+			{	
+				icon: 'shenjingwangluo',
+				name: '神经网络',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			},
+			{	
+				icon: 'zhinengtuxiangshibie',
+				name: '智能图像识别',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			},
+			{	
+				icon: 'zhinengyuyinshibie',
+				name: '智能语音识别',
+				tooltip: '框架',
+				tooltipIcon: 'kuangjia'
+			},
+			{	
+				icon: 'jiqixuexi',
 				name: '机器学习',
 				tooltip: '框架',
 				tooltipIcon: 'kuangjia'
