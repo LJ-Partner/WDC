@@ -3,8 +3,8 @@ var COMMON = require('../common/common.js');
 $(function(){
 	var INDEX = {
 		init: function(){
-			this.bindEvent();
 			var ue = UE.getEditor('editor');
+			this.bindEvent();
 		},
 		bindEvent: function(){
 			$('.j-e-btn-select').on('click',function(){
@@ -39,26 +39,6 @@ $(function(){
 					$('.j-e-tag-tab-cnt .tab-item').eq(i).show().siblings().hide();
 				});
 			});
-
-			// var t = $('.item-list li a');
-			// var e ;
-			// t.click(function(t) {
-   //              var n, r, i;
-   //              return i = $(this).data('tag'),
-   //              r = -1,
-   //              e.result.forEach(function(e, t) {
-   //                  if (~~e.id === ~~i.id)
-   //                  return r = t
-   //              }),
-   //              r !== -1 ? (n = e.$container.find(".sf-typeHelper-item").eq(r),
-   //              n.css("background-color", "#FFF2AB"),
-   //              setTimeout(function() {
-   //                  return n.addClass("blink")
-   //              }, 1),
-   //              setTimeout(function() {
-   //                  return n.css("background-color", "#E7F2ED")
-   //              }, 1e3)) : e.result.length === e.opt.maxNum && 0 !== e.opt.maxNum ? t.preventDefault() : e.add(i)
-   //          });
 		}
 	}
 	INDEX.init();
