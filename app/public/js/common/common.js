@@ -14,6 +14,21 @@ module.exports = {
 		$('.j-e-dialog-close').on('click',function(){
 			$('.dialog-w').hide();	
 		});
+		$('.btn-reg').on('click',function(){
+			$('.dialog-w').hide();
+			$('.attention-category-w').show();	
+		});
+		$('.j-e-category-close').on('click',function(){
+			$('.attention-category-w').hide();
+		});
+		$(document).mouseup(function(e){  
+			var _con = $('.dialog');  
+			var _con2 = $('.attention-category-w'); // 设置目标区域 
+			console.log(_con);
+			if((!_con.is(e.target) && _con.has(e.target).length === 0) || (!_con2.is(e.target) && _con2.has(e.target).length === 0)){ 
+				$('.attention-category-w,.dialog-w').hide();
+			}  
+		}); 
 	},
 	commentRelated : function () {
 		$('.j-e-commentfocus').on('focus',function(){
