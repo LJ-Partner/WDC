@@ -22,8 +22,9 @@
     top: 0;
     bottom: 0;
     z-index: 100;
-    padding:120px 0 20px 0;
     align-items: center;
+    justify-content: center;
+    padding:120px 0 20px 0;
     .dialog{
 		animation: ngdialog-flyin .5s;
 		background: #fff;
@@ -31,12 +32,8 @@
 		font-family: Montserrat;
 		font-size: 13px;
 		line-height: 20px;
-		margin: 0 auto;
-		max-width: 100%;
-		position: relative;
-		width: auto;
 		border-radius: 3px;
-		background-clip: padding-box;	
+		position: relative;
 		.dialog-cnt{
 			width: 334px;
 			padding: 36px;
@@ -93,6 +90,26 @@
 						margin: 0;
 						padding: 14px 40px 13px 40px;
 						width: 100%;
+						background: #fff;
+					}
+					&::-webkit-input-placeholder {
+						/* WebKit browsers */
+						color: #87969d !important;
+					}
+					&:-moz-placeholder {
+
+						/* Mozilla Firefox 4 to 18 */
+						color: #87969d !important;
+					}
+					&::-moz-placeholder {
+
+						/* Mozilla Firefox 19+ */
+						color:#87969d !important;
+					}
+					&:-ms-input-placeholder {
+
+						/* Internet Explorer 10+ */
+						color:#87969d !important;
 					}
 					i{
 						position: absolute;
@@ -145,13 +162,14 @@
 				}
 			}
 			.reg-box{
-				.form-row{
-					&:nth-child(3){
-						.flex();
-						.btn{
-							flex: 0 0 108px;
-							margin: 0 0 0 14px;
-						}
+				.form-row-flex{
+					.flex();
+					.btn{
+						flex: 0 0 108px;
+						margin: 0 0 0 14px;
+					}
+					input{
+						flex: 1 1 auto;
 					}
 				}
 			}

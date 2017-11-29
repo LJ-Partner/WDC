@@ -29,17 +29,13 @@ $(function(){
 				$('.j-e-tag-focus-cnt').show();
 			});
 			$('body').on('click', function(e) {
-				if(e.target != $('input[type=checkbox]')[0]){
-					e.preventDefault();
-				}
-                if ($(e.target).parents(".j-e-tag-focus-cnt").length === 0 && $(e.target).parents('.tags-info').length === 0 && !$(e.target).hasClass('tags-info'))
+                if ($(e.target).parents('.j-e-tag-focus-cnt').length === 0 && $(e.target).parents('.tags-info').length === 0 && !$(e.target).hasClass('tags-info'))
                 return $('.j-e-tag-focus-cnt').hide();
-            }),
+            });
 			$('.j-e-tag-tab li').each(function(i){
-				$('.j-e-tag-tab li').on('click',function(){
+				$(this).on('click',function(){
 					$(this).addClass('active').siblings().removeClass('active');
 					$('.j-e-tag-tab-cnt .tab-item').eq(i).show().siblings().hide();
-					
 				});
 			});
 			$('.item-list li a').unbind().on('click',function(){
