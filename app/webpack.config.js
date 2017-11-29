@@ -93,6 +93,11 @@ module.exports = {
                 }
                 return JSON.stringify(assets);
             }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
         })
     ]
 }
