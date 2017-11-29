@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "pm2 start ./bin/www --watch",
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "release":"webpack --config webpack.package.js"
   },
   "dependencies": {
     "autoprefixer": "^7.1.6",
