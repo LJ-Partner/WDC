@@ -1,0 +1,58 @@
+{% extends '../layout/layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{loadmap.css}}">
+{% endblock%}
+
+{% block body %}
+	{% include "../global/head-top.html" ignore missing %}
+	<div class="form-wrap">
+		<div class="form-main">
+			<form class="main-box" >
+				<p class="box-img">
+					<img src="/img/login-logo.png" />
+					<span>beeman</span>
+				</p>
+				<p class="box-tit">新用户注册</p>
+				<p class="err-tip hide">
+					<i class="iconfont icon-guanbi1"></i>
+					<span class="tootip">请输入正确的账号或密码</span>
+				</p>
+				<div class="box-row">
+					<input type="text" tabindex="1" name="" id="userName" placeholder="用户名">
+				</div>
+				<div class="box-row">
+					<input type="text" tabindex="2" name="" id="userMobile" placeholder="请输入手机号">
+				</div>
+				<div class="box-row box-row-flex">
+					<div class="code-img-w">
+						<img id="codeImg" />	
+					</div>
+					<input type="text" class="code-value" id="codeValue" value=""  tabindex="3"/>
+				</div>
+				<div class="box-row box-row-flex">
+					<input type="text" name="" id="msgCode" tabindex="4" placeholder="短信验证码">
+					<button type="button" class="box-btn box-btn-gray j-e-send" disabled="true">验证码</button>
+				</div>
+				<!-- <div class="box-row">
+					<input type="text" name="" id="inviteCode" tabindex="5"  placeholder="邀请码(非必填)">
+				</div> -->
+				<div class="box-row">
+					<input type="password" tabindex="6" id="passWord" name="" placeholder="密码">
+				</div>
+				<button type="button" class="box-btn box-btn-green j-e-register">确认</button>
+				<div class="box-row box-row-flex">
+					<a class="font-gray">注册即代表同意《beeman协议》</a><a href="/findpwd">忘记密码</a>
+				</div>
+			</form>	
+			<p class="main-bottom">
+				<a href="/login">返回登录</a>
+			</p>		
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block js %}
+<script type="text/javascript" src="{{loadmap.js}}"></script>
+{% endblock %}

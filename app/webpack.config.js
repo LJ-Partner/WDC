@@ -17,6 +17,9 @@ function rdom() {
 module.exports = {
     entry: {        
         index:'./public/js/article/index.js',
+        login:'./public/js/login/index.js',
+        register:'./public/js/register/index.js',
+        findpwd:'./public/js/findpwd/index.js',
         search: './public/js/search/index.js',
         searchDetail: './public/js/search/detail.js',
         userIndex: './public/js/user/index.js',
