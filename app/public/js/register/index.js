@@ -3,21 +3,17 @@ import API from '../../js/api/index'
 $(function(){
 	var captchaId;
 	var REGISTER = {
-		init: function(){
+		init(){
 			var me = this;
 			me.bindEvent();
 			me.generateCaptcha();
 			me.formCheck();
 		},
-		bindEvent: function(){
+		bindEvent(){
 			var me = this;
 			$('.code-img-w').on('click',function(){
 				me.generateCaptcha();
 			});	
-			$('.j-e-send').on('click',function(){
-
-			});
-			
 		},
 		generateCaptcha(){
 			var send_params = {
@@ -105,7 +101,7 @@ $(function(){
 			var userMobile;
 			var codeValue;	
 			var msgCode;
-			var inviteCode = $('#msgCode').val();
+			//var inviteCode = $('#msgCode').val();
 			var passWord;
 			var telReg;
 			var sendParams;
@@ -179,7 +175,14 @@ $(function(){
 			});
 			$('.j-e-register').on('click',function(){
 				msgCode = $('#msgCode').val();
-				REGISTER.toRegister(userMobile,passWord,userName,msgCode);		
+				if(userName && userMobile && codeValue && msgCode && passWord){
+					$('.err-tip').hide();
+					$('.tootip').html('');
+					REGISTER.toRegister(userMobile,passWord,userName,msgCode);	
+				}else{
+					$('.err-tip').show();
+					$('.tootip').html('请把相关信息填写完整');		
+				}
 			});
 		}
 	}
