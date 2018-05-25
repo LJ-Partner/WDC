@@ -6,7 +6,8 @@ exports.index = function (req, res, next) {
 			title:'web社区项目',
 			data:Models.Article.home(),
 			leftSide: Models.leftSide,
-			loadmap:req.loadmap.index
+			loadmap:req.loadmap.index,
+			user:req.user
 		}
 	);
 }

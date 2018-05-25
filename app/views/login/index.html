@@ -6,24 +6,28 @@
 
 {% block body %}
 	{% include "../global/head-top.html" ignore missing %}
-	<div class="form-wrap">
+	
+	<div class="form-wrap" {{user}}>
 		<div class="form-main">
-			<form class="main-box" >
+			<form class="main-box" action="/login" method="post">
 				<p class="box-img">
 					<img src="/img/login-logo.png" />
 					<span>beeman</span>
 				</p>
 				<div class="box-row">
-					<input type="text" name="" placeholder="请输入手机号">
+					<input type="text" name="phone" placeholder="请输入手机号">
 				</div>
 				<div class="box-row">
-					<input type="text" name="" placeholder="请输入密码">
+					<input type="password" name="password" placeholder="请输入密码">
 				</div>
-				<!-- <p class="err-tip">
-					<i class="iconfont icon-guanbi1"></i>
-					<span>请输入正确的账号或密码</span>
-				</p> -->
-				<button type="button" class="box-btn box-btn-green j-e-login">登录</button>
+				{% if errmsg!='' %}
+					<p class="err-tip">
+						<i class="iconfont icon-guanbi1"></i>
+						<span>{{errmsg}}</span>
+					</p>
+				{% endif %}
+				<!--  -->
+				<button type="submit" class="box-btn box-btn-green ">登录</button>
 				<div class="box-row justify-right">
 					<a href="/findpwd">忘记密码</a>
 				</div>
