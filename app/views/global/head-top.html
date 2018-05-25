@@ -70,16 +70,21 @@
 				</div>
 			</div>
 		</li>
+		{% if !user%}
 		<li class="login-w">
-			<button class="login j-e-login">登录</button>
+			<a href="/login" class="login j-e-login">登录</a>
 			<button class="sign-up j-e-register">加入蜂人院</button>	
 		</li>
+		{% endif%}
 	</ul>
+	{% if user %}
 	<div class="user">
 		<div class="select-container">
 			<div class="active-option">
 				<img src="/img/avatar2.png">
-				<span>雷神</span>
+				
+				<span>{{ user.nickName }}</span>
+				
 				<i class="caret"></i>
 			</div>
 			<ul class="select-options">
@@ -96,7 +101,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="/logout">
 						<i class="iconfont icon-tuichu"></i>
 						<span>退出</span>	
 					</a>
@@ -104,5 +109,6 @@
 			</ul>
 		</div>	
 	</div>
+	{% endif%}
 </header>
 

@@ -13,14 +13,18 @@ const filter = require('../filter/index');
 router.get('/',filter.loadmap,article.index);
 router.get('/search/',filter.loadmap,search.index);
 router.get('/search/detail/:id',filter.loadmap,search.detail);
-router.get('/user/',filter.loadmap,user.index);
+/* 用户中心 */
+router.get('/user/',filter.loadmap,filter.access,user.index);
 router.get('/user/following',filter.loadmap,user.following);
 router.get('/user/fans',filter.loadmap,user.fans);
 router.get('/user/history',filter.loadmap,user.history);
 router.get('/user/edit/:id',filter.loadmap,user.edit);
 router.get('/write/',filter.loadmap,write.index);
 router.get('/howtowrite/',filter.loadmap,write.howtowrite);
+
 router.get('/login',filter.loadmap,login.index);
+router.post('/login',login.login);
+router.get('/logout',login.logout);
 router.get('/register',filter.loadmap,register.index);
 router.get('/findpwd',filter.loadmap,findpwd.index);
 
