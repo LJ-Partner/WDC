@@ -34,8 +34,6 @@ $(function(){
 					}else{
 						flag = 0;	
 					}
-					//搜索结果
-					console.log(flag);
 				}
 			});
 			$('.j-e-close-search-key').on('click',function(){
